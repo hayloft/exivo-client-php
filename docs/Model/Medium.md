@@ -1,0 +1,17 @@
+# Medium
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **string** |  | [optional] 
+**cid** | **string** |  | [optional] 
+**uid** | **string** |  | [optional] 
+**form_factor** | **string** |  | [optional] 
+**state** | **string** |  | [optional] 
+**person_id** | **string** |  | [optional] 
+**caption** | **string** |  | [optional] 
+**description** | **string** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
