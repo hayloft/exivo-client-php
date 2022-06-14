@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Exivo\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Exivo\ObjectSerializer;
 
 /**
  * TimeProfilePayload Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class TimeProfilePayload implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'name' => 'string',
-        'ranges' => '\Swagger\Client\Model\TimeRange[]'
+        'ranges' => '\Exivo\Model\TimeRange[]'
     ];
 
     /**
@@ -237,7 +237,7 @@ class TimeProfilePayload implements ModelInterface, ArrayAccess
     /**
      * Gets ranges
      *
-     * @return \Swagger\Client\Model\TimeRange[]
+     * @return \Exivo\Model\TimeRange[]
      */
     public function getRanges()
     {
@@ -247,7 +247,7 @@ class TimeProfilePayload implements ModelInterface, ArrayAccess
     /**
      * Sets ranges
      *
-     * @param \Swagger\Client\Model\TimeRange[] $ranges ranges
+     * @param \Exivo\Model\TimeRange[] $ranges ranges
      *
      * @return $this
      */

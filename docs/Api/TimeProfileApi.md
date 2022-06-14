@@ -1,4 +1,4 @@
-# Swagger\Client\TimeProfileApi
+# Exivo\TimeProfileApi
 
 All URIs are relative to *https://api.exivo.io/v1*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **defineTimeProfile**
-> \Swagger\Client\Model\TimeProfile defineTimeProfile($site_id, $body)
+> \Exivo\Model\TimeProfile defineTimeProfile($site_id, $body)
 
 Creates a new time profile
 
@@ -24,19 +24,19 @@ As body it expects a fully specified time profile containing a name and an array
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TimeProfileApi(
+$apiInstance = new Exivo\Api\TimeProfileApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $site_id = "site_id_example"; // string | ID of site to work
-$body = new \Swagger\Client\Model\TimeProfilePayload(); // \Swagger\Client\Model\TimeProfilePayload | time profile properties
+$body = new \Exivo\Model\TimeProfilePayload(); // \Exivo\Model\TimeProfilePayload | time profile properties
 
 try {
     $result = $apiInstance->defineTimeProfile($site_id, $body);
@@ -52,11 +52,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **string**| ID of site to work |
- **body** | [**\Swagger\Client\Model\TimeProfilePayload**](../Model/TimeProfilePayload.md)| time profile properties |
+ **body** | [**\Exivo\Model\TimeProfilePayload**](../Model/TimeProfilePayload.md)| time profile properties |
 
 ### Return type
 
-[**\Swagger\Client\Model\TimeProfile**](../Model/TimeProfile.md)
+[**\Exivo\Model\TimeProfile**](../Model/TimeProfile.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTimeProfile**
-> \Swagger\Client\Model\TimeProfile getTimeProfile($site_id, $time_profile_id)
+> \Exivo\Model\TimeProfile getTimeProfile($site_id, $time_profile_id)
 
 get time profile by ID
 
@@ -80,12 +80,12 @@ get time profile by ID
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TimeProfileApi(
+$apiInstance = new Exivo\Api\TimeProfileApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TimeProfile**](../Model/TimeProfile.md)
+[**\Exivo\Model\TimeProfile**](../Model/TimeProfile.md)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTimeProfiles**
-> \Swagger\Client\Model\TimeProfile[] getTimeProfiles($site_id, $skip, $limit, $sort, $sort_dir)
+> \Exivo\Model\TimeProfile[] getTimeProfiles($site_id, $skip, $limit, $sort, $sort_dir)
 
 get all timeprofiles
 
@@ -138,12 +138,12 @@ Returns all time profiles for the specified site.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TimeProfileApi(
+$apiInstance = new Exivo\Api\TimeProfileApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TimeProfile[]**](../Model/TimeProfile.md)
+[**\Exivo\Model\TimeProfile[]**](../Model/TimeProfile.md)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **redefineTimeProfile**
-> \Swagger\Client\Model\TimeProfile redefineTimeProfile($site_id, $time_profile_id, $body)
+> \Exivo\Model\TimeProfile redefineTimeProfile($site_id, $time_profile_id, $body)
 
 Updates the time profile
 
@@ -202,12 +202,12 @@ As body it expects a fully specified time profile like during the creation.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TimeProfileApi(
+$apiInstance = new Exivo\Api\TimeProfileApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -215,7 +215,7 @@ $apiInstance = new Swagger\Client\Api\TimeProfileApi(
 );
 $site_id = "site_id_example"; // string | ID of site to work
 $time_profile_id = "time_profile_id_example"; // string | ID of time profile to update
-$body = new \Swagger\Client\Model\TimeProfilePayload(); // \Swagger\Client\Model\TimeProfilePayload | time profile properties
+$body = new \Exivo\Model\TimeProfilePayload(); // \Exivo\Model\TimeProfilePayload | time profile properties
 
 try {
     $result = $apiInstance->redefineTimeProfile($site_id, $time_profile_id, $body);
@@ -232,11 +232,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **string**| ID of site to work |
  **time_profile_id** | **string**| ID of time profile to update |
- **body** | [**\Swagger\Client\Model\TimeProfilePayload**](../Model/TimeProfilePayload.md)| time profile properties |
+ **body** | [**\Exivo\Model\TimeProfilePayload**](../Model/TimeProfilePayload.md)| time profile properties |
 
 ### Return type
 
-[**\Swagger\Client\Model\TimeProfile**](../Model/TimeProfile.md)
+[**\Exivo\Model\TimeProfile**](../Model/TimeProfile.md)
 
 ### Authorization
 
@@ -262,12 +262,12 @@ Delete the time profile from the site. If the time profile is assigned to an acc
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\TimeProfileApi(
+$apiInstance = new Exivo\Api\TimeProfileApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

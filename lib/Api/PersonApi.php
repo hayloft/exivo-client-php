@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Exivo\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Exivo\ApiException;
+use Exivo\Configuration;
+use Exivo\HeaderSelector;
+use Exivo\ObjectSerializer;
 
 /**
  * PersonApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,11 +93,11 @@ class PersonApi
      * Creates a new person
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\PersonPayload $body person properties (required)
+     * @param  \Exivo\Model\PersonPayload $body person properties (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Person
+     * @return \Exivo\Model\Person
      */
     public function addPerson($site_id, $body)
     {
@@ -111,15 +111,15 @@ class PersonApi
      * Creates a new person
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\PersonPayload $body person properties (required)
+     * @param  \Exivo\Model\PersonPayload $body person properties (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Person, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\Person, HTTP status code, HTTP response headers (array of strings)
      */
     public function addPersonWithHttpInfo($site_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\Person';
+        $returnType = '\Exivo\Model\Person';
         $request = $this->addPersonRequest($site_id, $body);
 
         try {
@@ -171,7 +171,7 @@ class PersonApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Person',
+                        '\Exivo\Model\Person',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -187,7 +187,7 @@ class PersonApi
      * Creates a new person
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\PersonPayload $body person properties (required)
+     * @param  \Exivo\Model\PersonPayload $body person properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -208,14 +208,14 @@ class PersonApi
      * Creates a new person
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\PersonPayload $body person properties (required)
+     * @param  \Exivo\Model\PersonPayload $body person properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function addPersonAsyncWithHttpInfo($site_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\Person';
+        $returnType = '\Exivo\Model\Person';
         $request = $this->addPersonRequest($site_id, $body);
 
         return $this->client
@@ -259,7 +259,7 @@ class PersonApi
      * Create request for operation 'addPerson'
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\PersonPayload $body person properties (required)
+     * @param  \Exivo\Model\PersonPayload $body person properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -384,7 +384,7 @@ class PersonApi
      * @param  string $access_group_id ID of access group (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -403,7 +403,7 @@ class PersonApi
      * @param  string $access_group_id ID of access group (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -664,9 +664,9 @@ class PersonApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\AssignMediumPayload $body body (optional)
+     * @param  \Exivo\Model\AssignMediumPayload $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -683,9 +683,9 @@ class PersonApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\AssignMediumPayload $body (optional)
+     * @param  \Exivo\Model\AssignMediumPayload $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -739,7 +739,7 @@ class PersonApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\AssignMediumPayload $body (optional)
+     * @param  \Exivo\Model\AssignMediumPayload $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -762,7 +762,7 @@ class PersonApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\AssignMediumPayload $body (optional)
+     * @param  \Exivo\Model\AssignMediumPayload $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -801,7 +801,7 @@ class PersonApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\AssignMediumPayload $body (optional)
+     * @param  \Exivo\Model\AssignMediumPayload $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -946,9 +946,9 @@ class PersonApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\AssignMediumPayload $body body (optional)
+     * @param  \Exivo\Model\AssignMediumPayload $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -965,9 +965,9 @@ class PersonApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\AssignMediumPayload $body (optional)
+     * @param  \Exivo\Model\AssignMediumPayload $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1021,7 +1021,7 @@ class PersonApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\AssignMediumPayload $body (optional)
+     * @param  \Exivo\Model\AssignMediumPayload $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1044,7 +1044,7 @@ class PersonApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\AssignMediumPayload $body (optional)
+     * @param  \Exivo\Model\AssignMediumPayload $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1083,7 +1083,7 @@ class PersonApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\AssignMediumPayload $body (optional)
+     * @param  \Exivo\Model\AssignMediumPayload $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1227,11 +1227,11 @@ class PersonApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person to update (required)
-     * @param  \Swagger\Client\Model\PersonPayload $body person properties (required)
+     * @param  \Exivo\Model\PersonPayload $body person properties (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Person
+     * @return \Exivo\Model\Person
      */
     public function changePersonInfo($site_id, $person_id, $body)
     {
@@ -1246,15 +1246,15 @@ class PersonApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person to update (required)
-     * @param  \Swagger\Client\Model\PersonPayload $body person properties (required)
+     * @param  \Exivo\Model\PersonPayload $body person properties (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Person, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\Person, HTTP status code, HTTP response headers (array of strings)
      */
     public function changePersonInfoWithHttpInfo($site_id, $person_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\Person';
+        $returnType = '\Exivo\Model\Person';
         $request = $this->changePersonInfoRequest($site_id, $person_id, $body);
 
         try {
@@ -1306,7 +1306,7 @@ class PersonApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Person',
+                        '\Exivo\Model\Person',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1323,7 +1323,7 @@ class PersonApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person to update (required)
-     * @param  \Swagger\Client\Model\PersonPayload $body person properties (required)
+     * @param  \Exivo\Model\PersonPayload $body person properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1345,14 +1345,14 @@ class PersonApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person to update (required)
-     * @param  \Swagger\Client\Model\PersonPayload $body person properties (required)
+     * @param  \Exivo\Model\PersonPayload $body person properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function changePersonInfoAsyncWithHttpInfo($site_id, $person_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\Person';
+        $returnType = '\Exivo\Model\Person';
         $request = $this->changePersonInfoRequest($site_id, $person_id, $body);
 
         return $this->client
@@ -1397,7 +1397,7 @@ class PersonApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person to update (required)
-     * @param  \Swagger\Client\Model\PersonPayload $body person properties (required)
+     * @param  \Exivo\Model\PersonPayload $body person properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1534,7 +1534,7 @@ class PersonApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person to return (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1551,7 +1551,7 @@ class PersonApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person to return (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1789,9 +1789,9 @@ class PersonApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person to return (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Person
+     * @return \Exivo\Model\Person
      */
     public function getPerson($site_id, $person_id)
     {
@@ -1807,13 +1807,13 @@ class PersonApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person to return (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Person, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\Person, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPersonWithHttpInfo($site_id, $person_id)
     {
-        $returnType = '\Swagger\Client\Model\Person';
+        $returnType = '\Exivo\Model\Person';
         $request = $this->getPersonRequest($site_id, $person_id);
 
         try {
@@ -1865,7 +1865,7 @@ class PersonApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Person',
+                        '\Exivo\Model\Person',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1909,7 +1909,7 @@ class PersonApi
      */
     public function getPersonAsyncWithHttpInfo($site_id, $person_id)
     {
-        $returnType = '\Swagger\Client\Model\Person';
+        $returnType = '\Exivo\Model\Person';
         $request = $this->getPersonRequest($site_id, $person_id);
 
         return $this->client
@@ -2086,9 +2086,9 @@ class PersonApi
      * @param  \DateTime $from e.g. \&quot;2013-10-22\&quot; (optional)
      * @param  \DateTime $to e.g. \&quot;2013-10-23\&quot; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccessLogEntry[]
+     * @return \Exivo\Model\AccessLogEntry[]
      */
     public function getPersonAccessLog($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
@@ -2109,13 +2109,13 @@ class PersonApi
      * @param  \DateTime $from e.g. \&quot;2013-10-22\&quot; (optional)
      * @param  \DateTime $to e.g. \&quot;2013-10-23\&quot; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccessLogEntry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\AccessLogEntry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getPersonAccessLogWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
-        $returnType = '\Swagger\Client\Model\AccessLogEntry[]';
+        $returnType = '\Exivo\Model\AccessLogEntry[]';
         $request = $this->getPersonAccessLogRequest($site_id, $skip, $limit, $sort, $sort_dir, $from, $to);
 
         try {
@@ -2167,7 +2167,7 @@ class PersonApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccessLogEntry[]',
+                        '\Exivo\Model\AccessLogEntry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2221,7 +2221,7 @@ class PersonApi
      */
     public function getPersonAccessLogAsyncWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
-        $returnType = '\Swagger\Client\Model\AccessLogEntry[]';
+        $returnType = '\Exivo\Model\AccessLogEntry[]';
         $request = $this->getPersonAccessLogRequest($site_id, $skip, $limit, $sort, $sort_dir, $from, $to);
 
         return $this->client
@@ -2414,9 +2414,9 @@ class PersonApi
      * @param  \DateTime $from e.g. \&quot;2013-10-22\&quot; (optional)
      * @param  \DateTime $to e.g. \&quot;2013-10-23\&quot; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccessLogEntry[]
+     * @return \Exivo\Model\AccessLogEntry[]
      */
     public function getPersonAccessLogForOne($site_id, $person_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
@@ -2438,13 +2438,13 @@ class PersonApi
      * @param  \DateTime $from e.g. \&quot;2013-10-22\&quot; (optional)
      * @param  \DateTime $to e.g. \&quot;2013-10-23\&quot; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccessLogEntry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\AccessLogEntry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getPersonAccessLogForOneWithHttpInfo($site_id, $person_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
-        $returnType = '\Swagger\Client\Model\AccessLogEntry[]';
+        $returnType = '\Exivo\Model\AccessLogEntry[]';
         $request = $this->getPersonAccessLogForOneRequest($site_id, $person_id, $skip, $limit, $sort, $sort_dir, $from, $to);
 
         try {
@@ -2496,7 +2496,7 @@ class PersonApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccessLogEntry[]',
+                        '\Exivo\Model\AccessLogEntry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2552,7 +2552,7 @@ class PersonApi
      */
     public function getPersonAccessLogForOneAsyncWithHttpInfo($site_id, $person_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
-        $returnType = '\Swagger\Client\Model\AccessLogEntry[]';
+        $returnType = '\Exivo\Model\AccessLogEntry[]';
         $request = $this->getPersonAccessLogForOneRequest($site_id, $person_id, $skip, $limit, $sort, $sort_dir, $from, $to);
 
         return $this->client
@@ -2757,9 +2757,9 @@ class PersonApi
      * @param  string $sort for pagination (optional)
      * @param  string $sort_dir for pagination (optional, default to asc)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Person[]
+     * @return \Exivo\Model\Person[]
      */
     public function getPersons($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
@@ -2778,13 +2778,13 @@ class PersonApi
      * @param  string $sort for pagination (optional)
      * @param  string $sort_dir for pagination (optional, default to asc)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Person[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\Person[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getPersonsWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
-        $returnType = '\Swagger\Client\Model\Person[]';
+        $returnType = '\Exivo\Model\Person[]';
         $request = $this->getPersonsRequest($site_id, $skip, $limit, $sort, $sort_dir);
 
         try {
@@ -2836,7 +2836,7 @@ class PersonApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Person[]',
+                        '\Exivo\Model\Person[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2886,7 +2886,7 @@ class PersonApi
      */
     public function getPersonsAsyncWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
-        $returnType = '\Swagger\Client\Model\Person[]';
+        $returnType = '\Exivo\Model\Person[]';
         $request = $this->getPersonsRequest($site_id, $skip, $limit, $sort, $sort_dir);
 
         return $this->client
@@ -3064,9 +3064,9 @@ class PersonApi
      * @param  string $person_id ID of person to return (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Person
+     * @return \Exivo\Model\Person
      */
     public function resetPinCode($site_id, $person_id, $body = null)
     {
@@ -3083,13 +3083,13 @@ class PersonApi
      * @param  string $person_id ID of person to return (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Person, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\Person, HTTP status code, HTTP response headers (array of strings)
      */
     public function resetPinCodeWithHttpInfo($site_id, $person_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\Person';
+        $returnType = '\Exivo\Model\Person';
         $request = $this->resetPinCodeRequest($site_id, $person_id, $body);
 
         try {
@@ -3141,7 +3141,7 @@ class PersonApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Person',
+                        '\Exivo\Model\Person',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3187,7 +3187,7 @@ class PersonApi
      */
     public function resetPinCodeAsyncWithHttpInfo($site_id, $person_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\Person';
+        $returnType = '\Exivo\Model\Person';
         $request = $this->resetPinCodeRequest($site_id, $person_id, $body);
 
         return $this->client
@@ -3364,7 +3364,7 @@ class PersonApi
      * @param  string $person_id ID of person to delete (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3382,7 +3382,7 @@ class PersonApi
      * @param  string $person_id ID of person to delete (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3625,11 +3625,11 @@ class PersonApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person to return (required)
-     * @param  \Swagger\Client\Model\Body2 $body pinCode (required)
+     * @param  \Exivo\Model\Body2 $body pinCode (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Person
+     * @return \Exivo\Model\Person
      */
     public function setPinCode($site_id, $person_id, $body)
     {
@@ -3644,15 +3644,15 @@ class PersonApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person to return (required)
-     * @param  \Swagger\Client\Model\Body2 $body pinCode (required)
+     * @param  \Exivo\Model\Body2 $body pinCode (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Person, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\Person, HTTP status code, HTTP response headers (array of strings)
      */
     public function setPinCodeWithHttpInfo($site_id, $person_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\Person';
+        $returnType = '\Exivo\Model\Person';
         $request = $this->setPinCodeRequest($site_id, $person_id, $body);
 
         try {
@@ -3704,7 +3704,7 @@ class PersonApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Person',
+                        '\Exivo\Model\Person',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3721,7 +3721,7 @@ class PersonApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person to return (required)
-     * @param  \Swagger\Client\Model\Body2 $body pinCode (required)
+     * @param  \Exivo\Model\Body2 $body pinCode (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3743,14 +3743,14 @@ class PersonApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person to return (required)
-     * @param  \Swagger\Client\Model\Body2 $body pinCode (required)
+     * @param  \Exivo\Model\Body2 $body pinCode (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function setPinCodeAsyncWithHttpInfo($site_id, $person_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\Person';
+        $returnType = '\Exivo\Model\Person';
         $request = $this->setPinCodeRequest($site_id, $person_id, $body);
 
         return $this->client
@@ -3795,7 +3795,7 @@ class PersonApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person to return (required)
-     * @param  \Swagger\Client\Model\Body2 $body pinCode (required)
+     * @param  \Exivo\Model\Body2 $body pinCode (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3933,7 +3933,7 @@ class PersonApi
      * @param  string $person_id ID of person (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3951,7 +3951,7 @@ class PersonApi
      * @param  string $person_id ID of person (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4197,7 +4197,7 @@ class PersonApi
      * @param  string $medium_id ID of medium (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4216,7 +4216,7 @@ class PersonApi
      * @param  string $medium_id ID of medium (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4479,7 +4479,7 @@ class PersonApi
      * @param  string $medium_id ID of medium (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4498,7 +4498,7 @@ class PersonApi
      * @param  string $medium_id ID of medium (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4760,7 +4760,7 @@ class PersonApi
      * @param  string $person_id ID of person to return (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4778,7 +4778,7 @@ class PersonApi
      * @param  string $person_id ID of person to return (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

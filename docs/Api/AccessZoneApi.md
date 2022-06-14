@@ -1,4 +1,4 @@
-# Swagger\Client\AccessZoneApi
+# Exivo\AccessZoneApi
 
 All URIs are relative to *https://api.exivo.io/v1*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **getAccessZone**
-> \Swagger\Client\Model\AccessZone getAccessZone($site_id, $access_zone_id)
+> \Exivo\Model\AccessZone getAccessZone($site_id, $access_zone_id)
 
 get access zone by ID
 
@@ -21,12 +21,12 @@ Returns the access zone with the given id. If no access zone with this id exists
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AccessZoneApi(
+$apiInstance = new Exivo\Api\AccessZoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AccessZone**](../Model/AccessZone.md)
+[**\Exivo\Model\AccessZone**](../Model/AccessZone.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAccessZones**
-> \Swagger\Client\Model\AccessZone[] getAccessZones($site_id, $skip, $limit, $sort, $sort_dir)
+> \Exivo\Model\AccessZone[] getAccessZones($site_id, $skip, $limit, $sort, $sort_dir)
 
 get all access zones
 
@@ -79,12 +79,12 @@ Returns an array with all the access zones of the site. If the site doesn't have
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AccessZoneApi(
+$apiInstance = new Exivo\Api\AccessZoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AccessZone[]**](../Model/AccessZone.md)
+[**\Exivo\Model\AccessZone[]**](../Model/AccessZone.md)
 
 ### Authorization
 

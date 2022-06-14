@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Exivo\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Exivo\ApiException;
+use Exivo\Configuration;
+use Exivo\HeaderSelector;
+use Exivo\ObjectSerializer;
 
 /**
  * DigitalKeyVisitApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,11 +93,11 @@ class DigitalKeyVisitApi
      * Creates a new digital key visit
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\DigitalKeyVisitPayload $body digital key visit properties (required)
+     * @param  \Exivo\Model\DigitalKeyVisitPayload $body digital key visit properties (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\DigitalKeyVisit
+     * @return \Exivo\Model\DigitalKeyVisit
      */
     public function createDigitalKeyVisit($site_id, $body)
     {
@@ -111,15 +111,15 @@ class DigitalKeyVisitApi
      * Creates a new digital key visit
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\DigitalKeyVisitPayload $body digital key visit properties (required)
+     * @param  \Exivo\Model\DigitalKeyVisitPayload $body digital key visit properties (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\DigitalKeyVisit, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\DigitalKeyVisit, HTTP status code, HTTP response headers (array of strings)
      */
     public function createDigitalKeyVisitWithHttpInfo($site_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\DigitalKeyVisit';
+        $returnType = '\Exivo\Model\DigitalKeyVisit';
         $request = $this->createDigitalKeyVisitRequest($site_id, $body);
 
         try {
@@ -171,7 +171,7 @@ class DigitalKeyVisitApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\DigitalKeyVisit',
+                        '\Exivo\Model\DigitalKeyVisit',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -187,7 +187,7 @@ class DigitalKeyVisitApi
      * Creates a new digital key visit
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\DigitalKeyVisitPayload $body digital key visit properties (required)
+     * @param  \Exivo\Model\DigitalKeyVisitPayload $body digital key visit properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -208,14 +208,14 @@ class DigitalKeyVisitApi
      * Creates a new digital key visit
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\DigitalKeyVisitPayload $body digital key visit properties (required)
+     * @param  \Exivo\Model\DigitalKeyVisitPayload $body digital key visit properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createDigitalKeyVisitAsyncWithHttpInfo($site_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\DigitalKeyVisit';
+        $returnType = '\Exivo\Model\DigitalKeyVisit';
         $request = $this->createDigitalKeyVisitRequest($site_id, $body);
 
         return $this->client
@@ -259,7 +259,7 @@ class DigitalKeyVisitApi
      * Create request for operation 'createDigitalKeyVisit'
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\DigitalKeyVisitPayload $body digital key visit properties (required)
+     * @param  \Exivo\Model\DigitalKeyVisitPayload $body digital key visit properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -382,9 +382,9 @@ class DigitalKeyVisitApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $digital_key_visit_id ID of digital key visit (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\DigitalKeyVisit
+     * @return \Exivo\Model\DigitalKeyVisit
      */
     public function getDigitalKeyVisit($site_id, $digital_key_visit_id)
     {
@@ -400,13 +400,13 @@ class DigitalKeyVisitApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $digital_key_visit_id ID of digital key visit (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\DigitalKeyVisit, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\DigitalKeyVisit, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDigitalKeyVisitWithHttpInfo($site_id, $digital_key_visit_id)
     {
-        $returnType = '\Swagger\Client\Model\DigitalKeyVisit';
+        $returnType = '\Exivo\Model\DigitalKeyVisit';
         $request = $this->getDigitalKeyVisitRequest($site_id, $digital_key_visit_id);
 
         try {
@@ -458,7 +458,7 @@ class DigitalKeyVisitApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\DigitalKeyVisit',
+                        '\Exivo\Model\DigitalKeyVisit',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -502,7 +502,7 @@ class DigitalKeyVisitApi
      */
     public function getDigitalKeyVisitAsyncWithHttpInfo($site_id, $digital_key_visit_id)
     {
-        $returnType = '\Swagger\Client\Model\DigitalKeyVisit';
+        $returnType = '\Exivo\Model\DigitalKeyVisit';
         $request = $this->getDigitalKeyVisitRequest($site_id, $digital_key_visit_id);
 
         return $this->client
@@ -677,9 +677,9 @@ class DigitalKeyVisitApi
      * @param  string $sort for pagination (optional)
      * @param  string $sort_dir for pagination (optional, default to asc)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\DigitalKeyVisit[]
+     * @return \Exivo\Model\DigitalKeyVisit[]
      */
     public function getDigitalKeyVisits($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
@@ -698,13 +698,13 @@ class DigitalKeyVisitApi
      * @param  string $sort for pagination (optional)
      * @param  string $sort_dir for pagination (optional, default to asc)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\DigitalKeyVisit[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\DigitalKeyVisit[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getDigitalKeyVisitsWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
-        $returnType = '\Swagger\Client\Model\DigitalKeyVisit[]';
+        $returnType = '\Exivo\Model\DigitalKeyVisit[]';
         $request = $this->getDigitalKeyVisitsRequest($site_id, $skip, $limit, $sort, $sort_dir);
 
         try {
@@ -756,7 +756,7 @@ class DigitalKeyVisitApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\DigitalKeyVisit[]',
+                        '\Exivo\Model\DigitalKeyVisit[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -806,7 +806,7 @@ class DigitalKeyVisitApi
      */
     public function getDigitalKeyVisitsAsyncWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
-        $returnType = '\Swagger\Client\Model\DigitalKeyVisit[]';
+        $returnType = '\Exivo\Model\DigitalKeyVisit[]';
         $request = $this->getDigitalKeyVisitsRequest($site_id, $skip, $limit, $sort, $sort_dir);
 
         return $this->client
@@ -984,7 +984,7 @@ class DigitalKeyVisitApi
      * @param  string $digital_key_visit_id ID of digital key visit (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1002,7 +1002,7 @@ class DigitalKeyVisitApi
      * @param  string $digital_key_visit_id ID of digital key visit (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

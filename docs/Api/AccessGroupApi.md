@@ -1,4 +1,4 @@
-# Swagger\Client\AccessGroupApi
+# Exivo\AccessGroupApi
 
 All URIs are relative to *https://api.exivo.io/v1*
 
@@ -28,12 +28,12 @@ Assign an access group with `accessGroupId` to a person with `personId`. The per
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AccessGroupApi(
+$apiInstance = new Exivo\Api\AccessGroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -89,12 +89,12 @@ Assignes a new access zone to the access group with a time profile id in the bod
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AccessGroupApi(
+$apiInstance = new Exivo\Api\AccessGroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -138,7 +138,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **defineAccessGroup**
-> \Swagger\Client\Model\Accessgroup defineAccessGroup($site_id, $body)
+> \Exivo\Model\Accessgroup defineAccessGroup($site_id, $body)
 
 Define a new accessGroup
 
@@ -150,19 +150,19 @@ Define a new accessGroup. This request takes a json object with the properties: 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AccessGroupApi(
+$apiInstance = new Exivo\Api\AccessGroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $site_id = "site_id_example"; // string | ID of site to work
-$body = new \Swagger\Client\Model\AccessGroupPayload(); // \Swagger\Client\Model\AccessGroupPayload | access group properties
+$body = new \Exivo\Model\AccessGroupPayload(); // \Exivo\Model\AccessGroupPayload | access group properties
 
 try {
     $result = $apiInstance->defineAccessGroup($site_id, $body);
@@ -178,11 +178,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **string**| ID of site to work |
- **body** | [**\Swagger\Client\Model\AccessGroupPayload**](../Model/AccessGroupPayload.md)| access group properties |
+ **body** | [**\Exivo\Model\AccessGroupPayload**](../Model/AccessGroupPayload.md)| access group properties |
 
 ### Return type
 
-[**\Swagger\Client\Model\Accessgroup**](../Model/Accessgroup.md)
+[**\Exivo\Model\Accessgroup**](../Model/Accessgroup.md)
 
 ### Authorization
 
@@ -208,12 +208,12 @@ Delete an access group by `accessGroupId`. Before an access group can be deleted
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AccessGroupApi(
+$apiInstance = new Exivo\Api\AccessGroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -253,7 +253,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAccessGroup**
-> \Swagger\Client\Model\Accessgroup getAccessGroup($site_id, $access_group_id)
+> \Exivo\Model\Accessgroup getAccessGroup($site_id, $access_group_id)
 
 get access group by ID
 
@@ -265,12 +265,12 @@ Returns the access zone with the given id. If no access zone with this id exists
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AccessGroupApi(
+$apiInstance = new Exivo\Api\AccessGroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Accessgroup**](../Model/Accessgroup.md)
+[**\Exivo\Model\Accessgroup**](../Model/Accessgroup.md)
 
 ### Authorization
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAccessGroups**
-> \Swagger\Client\Model\Accessgroup[] getAccessGroups($site_id, $skip, $limit, $sort, $sort_dir)
+> \Exivo\Model\Accessgroup[] getAccessGroups($site_id, $skip, $limit, $sort, $sort_dir)
 
 get all access groups
 
@@ -323,12 +323,12 @@ Returns an array with all the access groups of the site. If the site doesn't hav
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AccessGroupApi(
+$apiInstance = new Exivo\Api\AccessGroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Accessgroup[]**](../Model/Accessgroup.md)
+[**\Exivo\Model\Accessgroup[]**](../Model/Accessgroup.md)
 
 ### Authorization
 
@@ -387,12 +387,12 @@ Unassign the access group from the person with the `personId`. This person loose
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AccessGroupApi(
+$apiInstance = new Exivo\Api\AccessGroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -444,12 +444,12 @@ unassign the access zone from the access group
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AccessGroupApi(
+$apiInstance = new Exivo\Api\AccessGroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -491,7 +491,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAccessGroup**
-> \Swagger\Client\Model\Accessgroup updateAccessGroup($site_id, $access_group_id, $body)
+> \Exivo\Model\Accessgroup updateAccessGroup($site_id, $access_group_id, $body)
 
 update an access group
 
@@ -503,12 +503,12 @@ Update name of an access group by `accessGroupId`.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AccessGroupApi(
+$apiInstance = new Exivo\Api\AccessGroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -516,7 +516,7 @@ $apiInstance = new Swagger\Client\Api\AccessGroupApi(
 );
 $site_id = "site_id_example"; // string | ID of site to work
 $access_group_id = "access_group_id_example"; // string | ID of access group to update
-$body = new \Swagger\Client\Model\AccessGroupPayload(); // \Swagger\Client\Model\AccessGroupPayload | access groups properties
+$body = new \Exivo\Model\AccessGroupPayload(); // \Exivo\Model\AccessGroupPayload | access groups properties
 
 try {
     $result = $apiInstance->updateAccessGroup($site_id, $access_group_id, $body);
@@ -533,11 +533,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **string**| ID of site to work |
  **access_group_id** | **string**| ID of access group to update |
- **body** | [**\Swagger\Client\Model\AccessGroupPayload**](../Model/AccessGroupPayload.md)| access groups properties |
+ **body** | [**\Exivo\Model\AccessGroupPayload**](../Model/AccessGroupPayload.md)| access groups properties |
 
 ### Return type
 
-[**\Swagger\Client\Model\Accessgroup**](../Model/Accessgroup.md)
+[**\Exivo\Model\Accessgroup**](../Model/Accessgroup.md)
 
 ### Authorization
 

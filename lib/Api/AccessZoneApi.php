@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Exivo\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Exivo\ApiException;
+use Exivo\Configuration;
+use Exivo\HeaderSelector;
+use Exivo\ObjectSerializer;
 
 /**
  * AccessZoneApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,9 +95,9 @@ class AccessZoneApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $access_zone_id ID of access zone to return (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccessZone
+     * @return \Exivo\Model\AccessZone
      */
     public function getAccessZone($site_id, $access_zone_id)
     {
@@ -113,13 +113,13 @@ class AccessZoneApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $access_zone_id ID of access zone to return (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccessZone, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\AccessZone, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccessZoneWithHttpInfo($site_id, $access_zone_id)
     {
-        $returnType = '\Swagger\Client\Model\AccessZone';
+        $returnType = '\Exivo\Model\AccessZone';
         $request = $this->getAccessZoneRequest($site_id, $access_zone_id);
 
         try {
@@ -171,7 +171,7 @@ class AccessZoneApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccessZone',
+                        '\Exivo\Model\AccessZone',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -215,7 +215,7 @@ class AccessZoneApi
      */
     public function getAccessZoneAsyncWithHttpInfo($site_id, $access_zone_id)
     {
-        $returnType = '\Swagger\Client\Model\AccessZone';
+        $returnType = '\Exivo\Model\AccessZone';
         $request = $this->getAccessZoneRequest($site_id, $access_zone_id);
 
         return $this->client
@@ -390,9 +390,9 @@ class AccessZoneApi
      * @param  string $sort for pagination (optional)
      * @param  string $sort_dir for pagination (optional, default to asc)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccessZone[]
+     * @return \Exivo\Model\AccessZone[]
      */
     public function getAccessZones($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
@@ -411,13 +411,13 @@ class AccessZoneApi
      * @param  string $sort for pagination (optional)
      * @param  string $sort_dir for pagination (optional, default to asc)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccessZone[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\AccessZone[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccessZonesWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
-        $returnType = '\Swagger\Client\Model\AccessZone[]';
+        $returnType = '\Exivo\Model\AccessZone[]';
         $request = $this->getAccessZonesRequest($site_id, $skip, $limit, $sort, $sort_dir);
 
         try {
@@ -469,7 +469,7 @@ class AccessZoneApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccessZone[]',
+                        '\Exivo\Model\AccessZone[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -519,7 +519,7 @@ class AccessZoneApi
      */
     public function getAccessZonesAsyncWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
-        $returnType = '\Swagger\Client\Model\AccessZone[]';
+        $returnType = '\Exivo\Model\AccessZone[]';
         $request = $this->getAccessZonesRequest($site_id, $skip, $limit, $sort, $sort_dir);
 
         return $this->client

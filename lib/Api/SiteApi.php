@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Exivo\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Exivo\ApiException;
+use Exivo\Configuration;
+use Exivo\HeaderSelector;
+use Exivo\ObjectSerializer;
 
 /**
  * SiteApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class SiteApi
      *
      * @param  string $site_id ID of site to work (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SiteInfo
+     * @return \Exivo\Model\SiteInfo
      */
     public function getSiteInfo($site_id)
     {
@@ -111,13 +111,13 @@ class SiteApi
      *
      * @param  string $site_id ID of site to work (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SiteInfo, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\SiteInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSiteInfoWithHttpInfo($site_id)
     {
-        $returnType = '\Swagger\Client\Model\SiteInfo';
+        $returnType = '\Exivo\Model\SiteInfo';
         $request = $this->getSiteInfoRequest($site_id);
 
         try {
@@ -169,7 +169,7 @@ class SiteApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SiteInfo',
+                        '\Exivo\Model\SiteInfo',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class SiteApi
      */
     public function getSiteInfoAsyncWithHttpInfo($site_id)
     {
-        $returnType = '\Swagger\Client\Model\SiteInfo';
+        $returnType = '\Exivo\Model\SiteInfo';
         $request = $this->getSiteInfoRequest($site_id);
 
         return $this->client

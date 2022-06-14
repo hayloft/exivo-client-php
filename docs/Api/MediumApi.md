@@ -1,4 +1,4 @@
-# Swagger\Client\MediumApi
+# Exivo\MediumApi
 
 All URIs are relative to *https://api.exivo.io/v1*
 
@@ -25,12 +25,12 @@ Activate medium by id
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\MediumApi(
+$apiInstance = new Exivo\Api\MediumApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -38,7 +38,7 @@ $apiInstance = new Swagger\Client\Api\MediumApi(
 );
 $site_id = "site_id_example"; // string | ID of site to work
 $medium_id = "medium_id_example"; // string | ID of medium
-$body = new \Swagger\Client\Model\ActivateMediumPayload(); // \Swagger\Client\Model\ActivateMediumPayload | activate digital key properties
+$body = new \Exivo\Model\ActivateMediumPayload(); // \Exivo\Model\ActivateMediumPayload | activate digital key properties
 
 try {
     $apiInstance->activateMedium($site_id, $medium_id, $body);
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **string**| ID of site to work |
  **medium_id** | **string**| ID of medium |
- **body** | [**\Swagger\Client\Model\ActivateMediumPayload**](../Model/ActivateMediumPayload.md)| activate digital key properties | [optional]
+ **body** | [**\Exivo\Model\ActivateMediumPayload**](../Model/ActivateMediumPayload.md)| activate digital key properties | [optional]
 
 ### Return type
 
@@ -84,12 +84,12 @@ Assign a medium with `mediumId` to a person with the `personId`. The medium swit
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\MediumApi(
+$apiInstance = new Exivo\Api\MediumApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -98,7 +98,7 @@ $apiInstance = new Swagger\Client\Api\MediumApi(
 $site_id = "site_id_example"; // string | ID of site to work
 $person_id = "person_id_example"; // string | ID of person
 $medium_id = "medium_id_example"; // string | ID of medium
-$body = new \Swagger\Client\Model\AssignMediumPayload(); // \Swagger\Client\Model\AssignMediumPayload | 
+$body = new \Exivo\Model\AssignMediumPayload(); // \Exivo\Model\AssignMediumPayload | 
 
 try {
     $apiInstance->assignMedium($site_id, $person_id, $medium_id, $body);
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
  **site_id** | **string**| ID of site to work |
  **person_id** | **string**| ID of person |
  **medium_id** | **string**| ID of medium |
- **body** | [**\Swagger\Client\Model\AssignMediumPayload**](../Model/AssignMediumPayload.md)|  | [optional]
+ **body** | [**\Exivo\Model\AssignMediumPayload**](../Model/AssignMediumPayload.md)|  | [optional]
 
 ### Return type
 
@@ -143,12 +143,12 @@ Block medium by id
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\MediumApi(
+$apiInstance = new Exivo\Api\MediumApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -190,7 +190,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMedia**
-> \Swagger\Client\Model\Medium[] getMedia($site_id, $skip, $limit, $sort, $sort_dir)
+> \Exivo\Model\Medium[] getMedia($site_id, $skip, $limit, $sort, $sort_dir)
 
 get all media
 
@@ -202,12 +202,12 @@ Returns an array with all the media of the site. If the site doesn't have any me
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\MediumApi(
+$apiInstance = new Exivo\Api\MediumApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Medium[]**](../Model/Medium.md)
+[**\Exivo\Model\Medium[]**](../Model/Medium.md)
 
 ### Authorization
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMedium**
-> \Swagger\Client\Model\Medium getMedium($site_id, $medium_id)
+> \Exivo\Model\Medium getMedium($site_id, $medium_id)
 
 get medium by ID
 
@@ -266,12 +266,12 @@ Returns the medium with the given id. If the site doesn't have a registered medi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\MediumApi(
+$apiInstance = new Exivo\Api\MediumApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -298,7 +298,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Medium**](../Model/Medium.md)
+[**\Exivo\Model\Medium**](../Model/Medium.md)
 
 ### Authorization
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **registerMedium**
-> \Swagger\Client\Model\Medium registerMedium($site_id, $body)
+> \Exivo\Model\Medium registerMedium($site_id, $body)
 
 Register a new medium
 
@@ -324,19 +324,19 @@ Register a new medium. This request takes a json object with the properties: `ci
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\MediumApi(
+$apiInstance = new Exivo\Api\MediumApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $site_id = "site_id_example"; // string | ID of site to work
-$body = new \Swagger\Client\Model\MediumPayload(); // \Swagger\Client\Model\MediumPayload | medium properties
+$body = new \Exivo\Model\MediumPayload(); // \Exivo\Model\MediumPayload | medium properties
 
 try {
     $result = $apiInstance->registerMedium($site_id, $body);
@@ -352,11 +352,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **string**| ID of site to work |
- **body** | [**\Swagger\Client\Model\MediumPayload**](../Model/MediumPayload.md)| medium properties |
+ **body** | [**\Exivo\Model\MediumPayload**](../Model/MediumPayload.md)| medium properties |
 
 ### Return type
 
-[**\Swagger\Client\Model\Medium**](../Model/Medium.md)
+[**\Exivo\Model\Medium**](../Model/Medium.md)
 
 ### Authorization
 
@@ -382,12 +382,12 @@ Unassign the medium with `mediumId` from the person with the `personId`. The med
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\MediumApi(
+$apiInstance = new Exivo\Api\MediumApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -443,12 +443,12 @@ Unregister a medium with the given id. If the medium was assigned to a person it
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\MediumApi(
+$apiInstance = new Exivo\Api\MediumApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

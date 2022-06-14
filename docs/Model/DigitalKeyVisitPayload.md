@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **components** | **string[]** |  | 
 **form_factor** | **string** |  | 
 **public_registration_id** | **string** |  | 
-**mobile_app** | [**\Swagger\Client\Model\MobileApp**](MobileApp.md) |  | 
+**mobile_app** | [**\Exivo\Model\MobileApp**](MobileApp.md) |  | 
 **install_notification** | **bool** |  | 
 **message** | **string** |  | [optional] 
 **callback_uri** | **string** |  | [optional] 

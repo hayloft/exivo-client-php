@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Exivo\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Exivo\ApiException;
+use Exivo\Configuration;
+use Exivo\HeaderSelector;
+use Exivo\ObjectSerializer;
 
 /**
  * AccessGroupApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -97,7 +97,7 @@ class AccessGroupApi
      * @param  string $access_group_id ID of access group (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -116,7 +116,7 @@ class AccessGroupApi
      * @param  string $access_group_id ID of access group (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -379,7 +379,7 @@ class AccessGroupApi
      * @param  string $access_zone_id ID of access zone to assign (required)
      * @param  string $time_profile_id The id of the time profile to use or ALWAYS or NEVER. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -398,7 +398,7 @@ class AccessGroupApi
      * @param  string $access_zone_id ID of access zone to assign (required)
      * @param  string $time_profile_id The id of the time profile to use or ALWAYS or NEVER. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -663,11 +663,11 @@ class AccessGroupApi
      * Define a new accessGroup
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\AccessGroupPayload $body access group properties (required)
+     * @param  \Exivo\Model\AccessGroupPayload $body access group properties (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Accessgroup
+     * @return \Exivo\Model\Accessgroup
      */
     public function defineAccessGroup($site_id, $body)
     {
@@ -681,15 +681,15 @@ class AccessGroupApi
      * Define a new accessGroup
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\AccessGroupPayload $body access group properties (required)
+     * @param  \Exivo\Model\AccessGroupPayload $body access group properties (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Accessgroup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\Accessgroup, HTTP status code, HTTP response headers (array of strings)
      */
     public function defineAccessGroupWithHttpInfo($site_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\Accessgroup';
+        $returnType = '\Exivo\Model\Accessgroup';
         $request = $this->defineAccessGroupRequest($site_id, $body);
 
         try {
@@ -741,7 +741,7 @@ class AccessGroupApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Accessgroup',
+                        '\Exivo\Model\Accessgroup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -757,7 +757,7 @@ class AccessGroupApi
      * Define a new accessGroup
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\AccessGroupPayload $body access group properties (required)
+     * @param  \Exivo\Model\AccessGroupPayload $body access group properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -778,14 +778,14 @@ class AccessGroupApi
      * Define a new accessGroup
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\AccessGroupPayload $body access group properties (required)
+     * @param  \Exivo\Model\AccessGroupPayload $body access group properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function defineAccessGroupAsyncWithHttpInfo($site_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\Accessgroup';
+        $returnType = '\Exivo\Model\Accessgroup';
         $request = $this->defineAccessGroupRequest($site_id, $body);
 
         return $this->client
@@ -829,7 +829,7 @@ class AccessGroupApi
      * Create request for operation 'defineAccessGroup'
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\AccessGroupPayload $body access group properties (required)
+     * @param  \Exivo\Model\AccessGroupPayload $body access group properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -952,7 +952,7 @@ class AccessGroupApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $access_group_id ID of access group to delete (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -969,7 +969,7 @@ class AccessGroupApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $access_group_id ID of access group to delete (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1207,9 +1207,9 @@ class AccessGroupApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $access_group_id ID of access group to return (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Accessgroup
+     * @return \Exivo\Model\Accessgroup
      */
     public function getAccessGroup($site_id, $access_group_id)
     {
@@ -1225,13 +1225,13 @@ class AccessGroupApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $access_group_id ID of access group to return (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Accessgroup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\Accessgroup, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccessGroupWithHttpInfo($site_id, $access_group_id)
     {
-        $returnType = '\Swagger\Client\Model\Accessgroup';
+        $returnType = '\Exivo\Model\Accessgroup';
         $request = $this->getAccessGroupRequest($site_id, $access_group_id);
 
         try {
@@ -1283,7 +1283,7 @@ class AccessGroupApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Accessgroup',
+                        '\Exivo\Model\Accessgroup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1327,7 +1327,7 @@ class AccessGroupApi
      */
     public function getAccessGroupAsyncWithHttpInfo($site_id, $access_group_id)
     {
-        $returnType = '\Swagger\Client\Model\Accessgroup';
+        $returnType = '\Exivo\Model\Accessgroup';
         $request = $this->getAccessGroupRequest($site_id, $access_group_id);
 
         return $this->client
@@ -1502,9 +1502,9 @@ class AccessGroupApi
      * @param  string $sort for pagination (optional)
      * @param  string $sort_dir for pagination (optional, default to asc)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Accessgroup[]
+     * @return \Exivo\Model\Accessgroup[]
      */
     public function getAccessGroups($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
@@ -1523,13 +1523,13 @@ class AccessGroupApi
      * @param  string $sort for pagination (optional)
      * @param  string $sort_dir for pagination (optional, default to asc)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Accessgroup[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\Accessgroup[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccessGroupsWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
-        $returnType = '\Swagger\Client\Model\Accessgroup[]';
+        $returnType = '\Exivo\Model\Accessgroup[]';
         $request = $this->getAccessGroupsRequest($site_id, $skip, $limit, $sort, $sort_dir);
 
         try {
@@ -1581,7 +1581,7 @@ class AccessGroupApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Accessgroup[]',
+                        '\Exivo\Model\Accessgroup[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1631,7 +1631,7 @@ class AccessGroupApi
      */
     public function getAccessGroupsAsyncWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
-        $returnType = '\Swagger\Client\Model\Accessgroup[]';
+        $returnType = '\Exivo\Model\Accessgroup[]';
         $request = $this->getAccessGroupsRequest($site_id, $skip, $limit, $sort, $sort_dir);
 
         return $this->client
@@ -1809,7 +1809,7 @@ class AccessGroupApi
      * @param  string $person_id ID of person (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1827,7 +1827,7 @@ class AccessGroupApi
      * @param  string $person_id ID of person (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2072,7 +2072,7 @@ class AccessGroupApi
      * @param  string $access_group_id ID of access group to change (required)
      * @param  string $access_zone_id ID of access zone to assign (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2090,7 +2090,7 @@ class AccessGroupApi
      * @param  string $access_group_id ID of access group to change (required)
      * @param  string $access_zone_id ID of access zone to assign (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2344,11 +2344,11 @@ class AccessGroupApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $access_group_id ID of access group to update (required)
-     * @param  \Swagger\Client\Model\AccessGroupPayload $body access groups properties (required)
+     * @param  \Exivo\Model\AccessGroupPayload $body access groups properties (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Accessgroup
+     * @return \Exivo\Model\Accessgroup
      */
     public function updateAccessGroup($site_id, $access_group_id, $body)
     {
@@ -2363,15 +2363,15 @@ class AccessGroupApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $access_group_id ID of access group to update (required)
-     * @param  \Swagger\Client\Model\AccessGroupPayload $body access groups properties (required)
+     * @param  \Exivo\Model\AccessGroupPayload $body access groups properties (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Accessgroup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\Accessgroup, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAccessGroupWithHttpInfo($site_id, $access_group_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\Accessgroup';
+        $returnType = '\Exivo\Model\Accessgroup';
         $request = $this->updateAccessGroupRequest($site_id, $access_group_id, $body);
 
         try {
@@ -2423,7 +2423,7 @@ class AccessGroupApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Accessgroup',
+                        '\Exivo\Model\Accessgroup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2440,7 +2440,7 @@ class AccessGroupApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $access_group_id ID of access group to update (required)
-     * @param  \Swagger\Client\Model\AccessGroupPayload $body access groups properties (required)
+     * @param  \Exivo\Model\AccessGroupPayload $body access groups properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2462,14 +2462,14 @@ class AccessGroupApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $access_group_id ID of access group to update (required)
-     * @param  \Swagger\Client\Model\AccessGroupPayload $body access groups properties (required)
+     * @param  \Exivo\Model\AccessGroupPayload $body access groups properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateAccessGroupAsyncWithHttpInfo($site_id, $access_group_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\Accessgroup';
+        $returnType = '\Exivo\Model\Accessgroup';
         $request = $this->updateAccessGroupRequest($site_id, $access_group_id, $body);
 
         return $this->client
@@ -2514,7 +2514,7 @@ class AccessGroupApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $access_group_id ID of access group to update (required)
-     * @param  \Swagger\Client\Model\AccessGroupPayload $body access groups properties (required)
+     * @param  \Exivo\Model\AccessGroupPayload $body access groups properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Exivo\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Exivo\ApiException;
+use Exivo\Configuration;
+use Exivo\HeaderSelector;
+use Exivo\ObjectSerializer;
 
 /**
  * DigitalKeyApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class DigitalKeyApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\ActivateDigitalKeyPayload $body activate digital key properties (optional)
+     * @param  \Exivo\Model\ActivateDigitalKeyPayload $body activate digital key properties (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -112,9 +112,9 @@ class DigitalKeyApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\ActivateDigitalKeyPayload $body activate digital key properties (optional)
+     * @param  \Exivo\Model\ActivateDigitalKeyPayload $body activate digital key properties (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -167,7 +167,7 @@ class DigitalKeyApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\ActivateDigitalKeyPayload $body activate digital key properties (optional)
+     * @param  \Exivo\Model\ActivateDigitalKeyPayload $body activate digital key properties (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -189,7 +189,7 @@ class DigitalKeyApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\ActivateDigitalKeyPayload $body activate digital key properties (optional)
+     * @param  \Exivo\Model\ActivateDigitalKeyPayload $body activate digital key properties (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -227,7 +227,7 @@ class DigitalKeyApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\ActivateDigitalKeyPayload $body activate digital key properties (optional)
+     * @param  \Exivo\Model\ActivateDigitalKeyPayload $body activate digital key properties (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -358,9 +358,9 @@ class DigitalKeyApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\AssignMediumPayload $body body (optional)
+     * @param  \Exivo\Model\AssignMediumPayload $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -377,9 +377,9 @@ class DigitalKeyApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\AssignMediumPayload $body (optional)
+     * @param  \Exivo\Model\AssignMediumPayload $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -433,7 +433,7 @@ class DigitalKeyApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\AssignMediumPayload $body (optional)
+     * @param  \Exivo\Model\AssignMediumPayload $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -456,7 +456,7 @@ class DigitalKeyApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\AssignMediumPayload $body (optional)
+     * @param  \Exivo\Model\AssignMediumPayload $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -495,7 +495,7 @@ class DigitalKeyApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $person_id ID of person (required)
      * @param  string $medium_id ID of medium (required)
-     * @param  \Swagger\Client\Model\AssignMediumPayload $body (optional)
+     * @param  \Exivo\Model\AssignMediumPayload $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -641,7 +641,7 @@ class DigitalKeyApi
      * @param  string $medium_id ID of medium (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -659,7 +659,7 @@ class DigitalKeyApi
      * @param  string $medium_id ID of medium (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -903,9 +903,9 @@ class DigitalKeyApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $medium_id ID of digital key to return (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\DigitalKey
+     * @return \Exivo\Model\DigitalKey
      */
     public function getDigitalKey($site_id, $medium_id)
     {
@@ -921,13 +921,13 @@ class DigitalKeyApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $medium_id ID of digital key to return (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\DigitalKey, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\DigitalKey, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDigitalKeyWithHttpInfo($site_id, $medium_id)
     {
-        $returnType = '\Swagger\Client\Model\DigitalKey';
+        $returnType = '\Exivo\Model\DigitalKey';
         $request = $this->getDigitalKeyRequest($site_id, $medium_id);
 
         try {
@@ -979,7 +979,7 @@ class DigitalKeyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\DigitalKey',
+                        '\Exivo\Model\DigitalKey',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1023,7 +1023,7 @@ class DigitalKeyApi
      */
     public function getDigitalKeyAsyncWithHttpInfo($site_id, $medium_id)
     {
-        $returnType = '\Swagger\Client\Model\DigitalKey';
+        $returnType = '\Exivo\Model\DigitalKey';
         $request = $this->getDigitalKeyRequest($site_id, $medium_id);
 
         return $this->client
@@ -1198,9 +1198,9 @@ class DigitalKeyApi
      * @param  string $sort for pagination (optional)
      * @param  string $sort_dir for pagination (optional, default to asc)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\DigitalKey[]
+     * @return \Exivo\Model\DigitalKey[]
      */
     public function getDigitalKeys($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
@@ -1219,13 +1219,13 @@ class DigitalKeyApi
      * @param  string $sort for pagination (optional)
      * @param  string $sort_dir for pagination (optional, default to asc)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\DigitalKey[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\DigitalKey[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getDigitalKeysWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
-        $returnType = '\Swagger\Client\Model\DigitalKey[]';
+        $returnType = '\Exivo\Model\DigitalKey[]';
         $request = $this->getDigitalKeysRequest($site_id, $skip, $limit, $sort, $sort_dir);
 
         try {
@@ -1277,7 +1277,7 @@ class DigitalKeyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\DigitalKey[]',
+                        '\Exivo\Model\DigitalKey[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1327,7 +1327,7 @@ class DigitalKeyApi
      */
     public function getDigitalKeysAsyncWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
-        $returnType = '\Swagger\Client\Model\DigitalKey[]';
+        $returnType = '\Exivo\Model\DigitalKey[]';
         $request = $this->getDigitalKeysRequest($site_id, $skip, $limit, $sort, $sort_dir);
 
         return $this->client
@@ -1502,11 +1502,11 @@ class DigitalKeyApi
      * Register a new digital key
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\DigitalKeyPayload $body medium properties (required)
+     * @param  \Exivo\Model\DigitalKeyPayload $body medium properties (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\DigitalKey
+     * @return \Exivo\Model\DigitalKey
      */
     public function registerDigitalKey($site_id, $body)
     {
@@ -1520,15 +1520,15 @@ class DigitalKeyApi
      * Register a new digital key
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\DigitalKeyPayload $body medium properties (required)
+     * @param  \Exivo\Model\DigitalKeyPayload $body medium properties (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\DigitalKey, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\DigitalKey, HTTP status code, HTTP response headers (array of strings)
      */
     public function registerDigitalKeyWithHttpInfo($site_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\DigitalKey';
+        $returnType = '\Exivo\Model\DigitalKey';
         $request = $this->registerDigitalKeyRequest($site_id, $body);
 
         try {
@@ -1580,7 +1580,7 @@ class DigitalKeyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\DigitalKey',
+                        '\Exivo\Model\DigitalKey',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1596,7 +1596,7 @@ class DigitalKeyApi
      * Register a new digital key
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\DigitalKeyPayload $body medium properties (required)
+     * @param  \Exivo\Model\DigitalKeyPayload $body medium properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1617,14 +1617,14 @@ class DigitalKeyApi
      * Register a new digital key
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\DigitalKeyPayload $body medium properties (required)
+     * @param  \Exivo\Model\DigitalKeyPayload $body medium properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function registerDigitalKeyAsyncWithHttpInfo($site_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\DigitalKey';
+        $returnType = '\Exivo\Model\DigitalKey';
         $request = $this->registerDigitalKeyRequest($site_id, $body);
 
         return $this->client
@@ -1668,7 +1668,7 @@ class DigitalKeyApi
      * Create request for operation 'registerDigitalKey'
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\DigitalKeyPayload $body medium properties (required)
+     * @param  \Exivo\Model\DigitalKeyPayload $body medium properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1793,7 +1793,7 @@ class DigitalKeyApi
      * @param  string $medium_id ID of medium (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1812,7 +1812,7 @@ class DigitalKeyApi
      * @param  string $medium_id ID of medium (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2073,7 +2073,7 @@ class DigitalKeyApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $medium_id ID of medium to return (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2090,7 +2090,7 @@ class DigitalKeyApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $medium_id ID of medium to return (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

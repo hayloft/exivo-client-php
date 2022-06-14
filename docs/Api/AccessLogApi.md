@@ -1,4 +1,4 @@
-# Swagger\Client\AccessLogApi
+# Exivo\AccessLogApi
 
 All URIs are relative to *https://api.exivo.io/v1*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **getComponentAccessLog**
-> \Swagger\Client\Model\AccessLogEntry[] getComponentAccessLog($site_id, $skip, $limit, $sort, $sort_dir, $from, $to)
+> \Exivo\Model\AccessLogEntry[] getComponentAccessLog($site_id, $skip, $limit, $sort, $sort_dir, $from, $to)
 
 get components access log
 
@@ -23,12 +23,12 @@ get components access log
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AccessLogApi(
+$apiInstance = new Exivo\Api\AccessLogApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AccessLogEntry[]**](../Model/AccessLogEntry.md)
+[**\Exivo\Model\AccessLogEntry[]**](../Model/AccessLogEntry.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getComponentAccessLogForOne**
-> \Swagger\Client\Model\AccessLogEntry[] getComponentAccessLogForOne($site_id, $component_id, $skip, $limit, $sort, $sort_dir, $from, $to)
+> \Exivo\Model\AccessLogEntry[] getComponentAccessLogForOne($site_id, $component_id, $skip, $limit, $sort, $sort_dir, $from, $to)
 
 get component's access log
 
@@ -91,12 +91,12 @@ get component's access log
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AccessLogApi(
+$apiInstance = new Exivo\Api\AccessLogApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AccessLogEntry[]**](../Model/AccessLogEntry.md)
+[**\Exivo\Model\AccessLogEntry[]**](../Model/AccessLogEntry.md)
 
 ### Authorization
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPersonAccessLog**
-> \Swagger\Client\Model\AccessLogEntry[] getPersonAccessLog($site_id, $skip, $limit, $sort, $sort_dir, $from, $to)
+> \Exivo\Model\AccessLogEntry[] getPersonAccessLog($site_id, $skip, $limit, $sort, $sort_dir, $from, $to)
 
 get persons access log
 
@@ -161,12 +161,12 @@ get persons access log
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AccessLogApi(
+$apiInstance = new Exivo\Api\AccessLogApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AccessLogEntry[]**](../Model/AccessLogEntry.md)
+[**\Exivo\Model\AccessLogEntry[]**](../Model/AccessLogEntry.md)
 
 ### Authorization
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPersonAccessLogForOne**
-> \Swagger\Client\Model\AccessLogEntry[] getPersonAccessLogForOne($site_id, $person_id, $skip, $limit, $sort, $sort_dir, $from, $to)
+> \Exivo\Model\AccessLogEntry[] getPersonAccessLogForOne($site_id, $person_id, $skip, $limit, $sort, $sort_dir, $from, $to)
 
 get person's access log
 
@@ -229,12 +229,12 @@ get person's access log
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\AccessLogApi(
+$apiInstance = new Exivo\Api\AccessLogApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AccessLogEntry[]**](../Model/AccessLogEntry.md)
+[**\Exivo\Model\AccessLogEntry[]**](../Model/AccessLogEntry.md)
 
 ### Authorization
 

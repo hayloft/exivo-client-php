@@ -1,4 +1,4 @@
-# Swagger\Client\PersonApi
+# Exivo\PersonApi
 
 All URIs are relative to *https://api.exivo.io/v1*
 
@@ -24,7 +24,7 @@ Method | HTTP request | Description
 
 
 # **addPerson**
-> \Swagger\Client\Model\Person addPerson($site_id, $body)
+> \Exivo\Model\Person addPerson($site_id, $body)
 
 Creates a new person
 
@@ -36,19 +36,19 @@ Create a new person. This request takes a json object with the properties: `firs
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\PersonApi(
+$apiInstance = new Exivo\Api\PersonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $site_id = "site_id_example"; // string | ID of site to work
-$body = new \Swagger\Client\Model\PersonPayload(); // \Swagger\Client\Model\PersonPayload | person properties
+$body = new \Exivo\Model\PersonPayload(); // \Exivo\Model\PersonPayload | person properties
 
 try {
     $result = $apiInstance->addPerson($site_id, $body);
@@ -64,11 +64,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **string**| ID of site to work |
- **body** | [**\Swagger\Client\Model\PersonPayload**](../Model/PersonPayload.md)| person properties |
+ **body** | [**\Exivo\Model\PersonPayload**](../Model/PersonPayload.md)| person properties |
 
 ### Return type
 
-[**\Swagger\Client\Model\Person**](../Model/Person.md)
+[**\Exivo\Model\Person**](../Model/Person.md)
 
 ### Authorization
 
@@ -94,12 +94,12 @@ Assign an access group with `accessGroupId` to a person with `personId`. The per
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\PersonApi(
+$apiInstance = new Exivo\Api\PersonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -155,12 +155,12 @@ Assign a medium with `mediumId` to a person with the `personId`. If The medium s
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\PersonApi(
+$apiInstance = new Exivo\Api\PersonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -169,7 +169,7 @@ $apiInstance = new Swagger\Client\Api\PersonApi(
 $site_id = "site_id_example"; // string | ID of site to work
 $person_id = "person_id_example"; // string | ID of person
 $medium_id = "medium_id_example"; // string | ID of medium
-$body = new \Swagger\Client\Model\AssignMediumPayload(); // \Swagger\Client\Model\AssignMediumPayload | 
+$body = new \Exivo\Model\AssignMediumPayload(); // \Exivo\Model\AssignMediumPayload | 
 
 try {
     $apiInstance->assignDigitalKey($site_id, $person_id, $medium_id, $body);
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
  **site_id** | **string**| ID of site to work |
  **person_id** | **string**| ID of person |
  **medium_id** | **string**| ID of medium |
- **body** | [**\Swagger\Client\Model\AssignMediumPayload**](../Model/AssignMediumPayload.md)|  | [optional]
+ **body** | [**\Exivo\Model\AssignMediumPayload**](../Model/AssignMediumPayload.md)|  | [optional]
 
 ### Return type
 
@@ -216,12 +216,12 @@ Assign a medium with `mediumId` to a person with the `personId`. The medium swit
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\PersonApi(
+$apiInstance = new Exivo\Api\PersonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -230,7 +230,7 @@ $apiInstance = new Swagger\Client\Api\PersonApi(
 $site_id = "site_id_example"; // string | ID of site to work
 $person_id = "person_id_example"; // string | ID of person
 $medium_id = "medium_id_example"; // string | ID of medium
-$body = new \Swagger\Client\Model\AssignMediumPayload(); // \Swagger\Client\Model\AssignMediumPayload | 
+$body = new \Exivo\Model\AssignMediumPayload(); // \Exivo\Model\AssignMediumPayload | 
 
 try {
     $apiInstance->assignMedium($site_id, $person_id, $medium_id, $body);
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
  **site_id** | **string**| ID of site to work |
  **person_id** | **string**| ID of person |
  **medium_id** | **string**| ID of medium |
- **body** | [**\Swagger\Client\Model\AssignMediumPayload**](../Model/AssignMediumPayload.md)|  | [optional]
+ **body** | [**\Exivo\Model\AssignMediumPayload**](../Model/AssignMediumPayload.md)|  | [optional]
 
 ### Return type
 
@@ -265,7 +265,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **changePersonInfo**
-> \Swagger\Client\Model\Person changePersonInfo($site_id, $person_id, $body)
+> \Exivo\Model\Person changePersonInfo($site_id, $person_id, $body)
 
 Updates a person in the store
 
@@ -277,12 +277,12 @@ Update `firstName`, `lastName`, `gender`, `email`, `phoneNumber`, `language`, `i
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\PersonApi(
+$apiInstance = new Exivo\Api\PersonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -290,7 +290,7 @@ $apiInstance = new Swagger\Client\Api\PersonApi(
 );
 $site_id = "site_id_example"; // string | ID of site to work
 $person_id = "person_id_example"; // string | ID of person to update
-$body = new \Swagger\Client\Model\PersonPayload(); // \Swagger\Client\Model\PersonPayload | person properties
+$body = new \Exivo\Model\PersonPayload(); // \Exivo\Model\PersonPayload | person properties
 
 try {
     $result = $apiInstance->changePersonInfo($site_id, $person_id, $body);
@@ -307,11 +307,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **string**| ID of site to work |
  **person_id** | **string**| ID of person to update |
- **body** | [**\Swagger\Client\Model\PersonPayload**](../Model/PersonPayload.md)| person properties |
+ **body** | [**\Exivo\Model\PersonPayload**](../Model/PersonPayload.md)| person properties |
 
 ### Return type
 
-[**\Swagger\Client\Model\Person**](../Model/Person.md)
+[**\Exivo\Model\Person**](../Model/Person.md)
 
 ### Authorization
 
@@ -337,12 +337,12 @@ Delete a person with `personId` from the site. If the person was assigned to an 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\PersonApi(
+$apiInstance = new Exivo\Api\PersonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -382,7 +382,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPerson**
-> \Swagger\Client\Model\Person getPerson($site_id, $person_id)
+> \Exivo\Model\Person getPerson($site_id, $person_id)
 
 get person by ID
 
@@ -394,12 +394,12 @@ Returns the person with the given `personId`. If the site doesn't have a person 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\PersonApi(
+$apiInstance = new Exivo\Api\PersonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -426,7 +426,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Person**](../Model/Person.md)
+[**\Exivo\Model\Person**](../Model/Person.md)
 
 ### Authorization
 
@@ -440,7 +440,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPersonAccessLog**
-> \Swagger\Client\Model\AccessLogEntry[] getPersonAccessLog($site_id, $skip, $limit, $sort, $sort_dir, $from, $to)
+> \Exivo\Model\AccessLogEntry[] getPersonAccessLog($site_id, $skip, $limit, $sort, $sort_dir, $from, $to)
 
 get persons access log
 
@@ -452,12 +452,12 @@ get persons access log
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\PersonApi(
+$apiInstance = new Exivo\Api\PersonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -494,7 +494,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AccessLogEntry[]**](../Model/AccessLogEntry.md)
+[**\Exivo\Model\AccessLogEntry[]**](../Model/AccessLogEntry.md)
 
 ### Authorization
 
@@ -508,7 +508,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPersonAccessLogForOne**
-> \Swagger\Client\Model\AccessLogEntry[] getPersonAccessLogForOne($site_id, $person_id, $skip, $limit, $sort, $sort_dir, $from, $to)
+> \Exivo\Model\AccessLogEntry[] getPersonAccessLogForOne($site_id, $person_id, $skip, $limit, $sort, $sort_dir, $from, $to)
 
 get person's access log
 
@@ -520,12 +520,12 @@ get person's access log
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\PersonApi(
+$apiInstance = new Exivo\Api\PersonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -564,7 +564,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AccessLogEntry[]**](../Model/AccessLogEntry.md)
+[**\Exivo\Model\AccessLogEntry[]**](../Model/AccessLogEntry.md)
 
 ### Authorization
 
@@ -578,7 +578,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPersons**
-> \Swagger\Client\Model\Person[] getPersons($site_id, $skip, $limit, $sort, $sort_dir)
+> \Exivo\Model\Person[] getPersons($site_id, $skip, $limit, $sort, $sort_dir)
 
 get all persons
 
@@ -590,12 +590,12 @@ Returns an array with all the persons of the site. If the site doesn't have any 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\PersonApi(
+$apiInstance = new Exivo\Api\PersonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -628,7 +628,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Person[]**](../Model/Person.md)
+[**\Exivo\Model\Person[]**](../Model/Person.md)
 
 ### Authorization
 
@@ -642,7 +642,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **resetPinCode**
-> \Swagger\Client\Model\Person resetPinCode($site_id, $person_id, $body)
+> \Exivo\Model\Person resetPinCode($site_id, $person_id, $body)
 
 Resets a pinCode for the person
 
@@ -654,12 +654,12 @@ Resets a `pinCode` for the person.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\PersonApi(
+$apiInstance = new Exivo\Api\PersonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -688,7 +688,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Person**](../Model/Person.md)
+[**\Exivo\Model\Person**](../Model/Person.md)
 
 ### Authorization
 
@@ -714,12 +714,12 @@ Revoke the access of a person with `personId` to the site. The `revoked` status 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\PersonApi(
+$apiInstance = new Exivo\Api\PersonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -761,7 +761,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setPinCode**
-> \Swagger\Client\Model\Person setPinCode($site_id, $person_id, $body)
+> \Exivo\Model\Person setPinCode($site_id, $person_id, $body)
 
 Sets a pinCode for the person
 
@@ -773,12 +773,12 @@ Sets a `pinCode` for the person. The `pinCode` must be a value having 4-6 digits
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\PersonApi(
+$apiInstance = new Exivo\Api\PersonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -786,7 +786,7 @@ $apiInstance = new Swagger\Client\Api\PersonApi(
 );
 $site_id = "site_id_example"; // string | ID of site to work
 $person_id = "person_id_example"; // string | ID of person to return
-$body = new \Swagger\Client\Model\Body2(); // \Swagger\Client\Model\Body2 | pinCode
+$body = new \Exivo\Model\Body2(); // \Exivo\Model\Body2 | pinCode
 
 try {
     $result = $apiInstance->setPinCode($site_id, $person_id, $body);
@@ -803,11 +803,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **string**| ID of site to work |
  **person_id** | **string**| ID of person to return |
- **body** | [**\Swagger\Client\Model\Body2**](../Model/Body2.md)| pinCode |
+ **body** | [**\Exivo\Model\Body2**](../Model/Body2.md)| pinCode |
 
 ### Return type
 
-[**\Swagger\Client\Model\Person**](../Model/Person.md)
+[**\Exivo\Model\Person**](../Model/Person.md)
 
 ### Authorization
 
@@ -833,12 +833,12 @@ Unassign the access group from the person with the `personId`. This person loose
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\PersonApi(
+$apiInstance = new Exivo\Api\PersonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -892,12 +892,12 @@ Unassign the digital key with `mediumId` from the person with the `personId`. Th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\PersonApi(
+$apiInstance = new Exivo\Api\PersonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -953,12 +953,12 @@ Unassign the medium with `mediumId` from the person with the `personId`. The med
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\PersonApi(
+$apiInstance = new Exivo\Api\PersonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1014,12 +1014,12 @@ Unrevoke the access of a person with `personId` to the site. The `revoked` statu
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\PersonApi(
+$apiInstance = new Exivo\Api\PersonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Exivo\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Exivo\ApiException;
+use Exivo\Configuration;
+use Exivo\HeaderSelector;
+use Exivo\ObjectSerializer;
 
 /**
  * TimeProfileApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,11 +93,11 @@ class TimeProfileApi
      * Creates a new time profile
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\TimeProfilePayload $body time profile properties (required)
+     * @param  \Exivo\Model\TimeProfilePayload $body time profile properties (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TimeProfile
+     * @return \Exivo\Model\TimeProfile
      */
     public function defineTimeProfile($site_id, $body)
     {
@@ -111,15 +111,15 @@ class TimeProfileApi
      * Creates a new time profile
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\TimeProfilePayload $body time profile properties (required)
+     * @param  \Exivo\Model\TimeProfilePayload $body time profile properties (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TimeProfile, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\TimeProfile, HTTP status code, HTTP response headers (array of strings)
      */
     public function defineTimeProfileWithHttpInfo($site_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\TimeProfile';
+        $returnType = '\Exivo\Model\TimeProfile';
         $request = $this->defineTimeProfileRequest($site_id, $body);
 
         try {
@@ -171,7 +171,7 @@ class TimeProfileApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TimeProfile',
+                        '\Exivo\Model\TimeProfile',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -187,7 +187,7 @@ class TimeProfileApi
      * Creates a new time profile
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\TimeProfilePayload $body time profile properties (required)
+     * @param  \Exivo\Model\TimeProfilePayload $body time profile properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -208,14 +208,14 @@ class TimeProfileApi
      * Creates a new time profile
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\TimeProfilePayload $body time profile properties (required)
+     * @param  \Exivo\Model\TimeProfilePayload $body time profile properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function defineTimeProfileAsyncWithHttpInfo($site_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\TimeProfile';
+        $returnType = '\Exivo\Model\TimeProfile';
         $request = $this->defineTimeProfileRequest($site_id, $body);
 
         return $this->client
@@ -259,7 +259,7 @@ class TimeProfileApi
      * Create request for operation 'defineTimeProfile'
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\TimeProfilePayload $body time profile properties (required)
+     * @param  \Exivo\Model\TimeProfilePayload $body time profile properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -382,9 +382,9 @@ class TimeProfileApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $time_profile_id ID of time profile to return (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TimeProfile
+     * @return \Exivo\Model\TimeProfile
      */
     public function getTimeProfile($site_id, $time_profile_id)
     {
@@ -400,13 +400,13 @@ class TimeProfileApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $time_profile_id ID of time profile to return (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TimeProfile, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\TimeProfile, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTimeProfileWithHttpInfo($site_id, $time_profile_id)
     {
-        $returnType = '\Swagger\Client\Model\TimeProfile';
+        $returnType = '\Exivo\Model\TimeProfile';
         $request = $this->getTimeProfileRequest($site_id, $time_profile_id);
 
         try {
@@ -458,7 +458,7 @@ class TimeProfileApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TimeProfile',
+                        '\Exivo\Model\TimeProfile',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -502,7 +502,7 @@ class TimeProfileApi
      */
     public function getTimeProfileAsyncWithHttpInfo($site_id, $time_profile_id)
     {
-        $returnType = '\Swagger\Client\Model\TimeProfile';
+        $returnType = '\Exivo\Model\TimeProfile';
         $request = $this->getTimeProfileRequest($site_id, $time_profile_id);
 
         return $this->client
@@ -677,9 +677,9 @@ class TimeProfileApi
      * @param  string $sort for pagination (optional)
      * @param  string $sort_dir for pagination (optional, default to asc)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TimeProfile[]
+     * @return \Exivo\Model\TimeProfile[]
      */
     public function getTimeProfiles($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
@@ -698,13 +698,13 @@ class TimeProfileApi
      * @param  string $sort for pagination (optional)
      * @param  string $sort_dir for pagination (optional, default to asc)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TimeProfile[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\TimeProfile[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getTimeProfilesWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
-        $returnType = '\Swagger\Client\Model\TimeProfile[]';
+        $returnType = '\Exivo\Model\TimeProfile[]';
         $request = $this->getTimeProfilesRequest($site_id, $skip, $limit, $sort, $sort_dir);
 
         try {
@@ -756,7 +756,7 @@ class TimeProfileApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TimeProfile[]',
+                        '\Exivo\Model\TimeProfile[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -806,7 +806,7 @@ class TimeProfileApi
      */
     public function getTimeProfilesAsyncWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
-        $returnType = '\Swagger\Client\Model\TimeProfile[]';
+        $returnType = '\Exivo\Model\TimeProfile[]';
         $request = $this->getTimeProfilesRequest($site_id, $skip, $limit, $sort, $sort_dir);
 
         return $this->client
@@ -982,11 +982,11 @@ class TimeProfileApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $time_profile_id ID of time profile to update (required)
-     * @param  \Swagger\Client\Model\TimeProfilePayload $body time profile properties (required)
+     * @param  \Exivo\Model\TimeProfilePayload $body time profile properties (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TimeProfile
+     * @return \Exivo\Model\TimeProfile
      */
     public function redefineTimeProfile($site_id, $time_profile_id, $body)
     {
@@ -1001,15 +1001,15 @@ class TimeProfileApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $time_profile_id ID of time profile to update (required)
-     * @param  \Swagger\Client\Model\TimeProfilePayload $body time profile properties (required)
+     * @param  \Exivo\Model\TimeProfilePayload $body time profile properties (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TimeProfile, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\TimeProfile, HTTP status code, HTTP response headers (array of strings)
      */
     public function redefineTimeProfileWithHttpInfo($site_id, $time_profile_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\TimeProfile';
+        $returnType = '\Exivo\Model\TimeProfile';
         $request = $this->redefineTimeProfileRequest($site_id, $time_profile_id, $body);
 
         try {
@@ -1061,7 +1061,7 @@ class TimeProfileApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TimeProfile',
+                        '\Exivo\Model\TimeProfile',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1078,7 +1078,7 @@ class TimeProfileApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $time_profile_id ID of time profile to update (required)
-     * @param  \Swagger\Client\Model\TimeProfilePayload $body time profile properties (required)
+     * @param  \Exivo\Model\TimeProfilePayload $body time profile properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1100,14 +1100,14 @@ class TimeProfileApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $time_profile_id ID of time profile to update (required)
-     * @param  \Swagger\Client\Model\TimeProfilePayload $body time profile properties (required)
+     * @param  \Exivo\Model\TimeProfilePayload $body time profile properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function redefineTimeProfileAsyncWithHttpInfo($site_id, $time_profile_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\TimeProfile';
+        $returnType = '\Exivo\Model\TimeProfile';
         $request = $this->redefineTimeProfileRequest($site_id, $time_profile_id, $body);
 
         return $this->client
@@ -1152,7 +1152,7 @@ class TimeProfileApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $time_profile_id ID of time profile to update (required)
-     * @param  \Swagger\Client\Model\TimeProfilePayload $body time profile properties (required)
+     * @param  \Exivo\Model\TimeProfilePayload $body time profile properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1289,7 +1289,7 @@ class TimeProfileApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $time_profile_id ID of time profile to delete (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1306,7 +1306,7 @@ class TimeProfileApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $time_profile_id ID of time profile to delete (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

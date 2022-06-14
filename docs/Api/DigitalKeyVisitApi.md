@@ -1,4 +1,4 @@
-# Swagger\Client\DigitalKeyVisitApi
+# Exivo\DigitalKeyVisitApi
 
 All URIs are relative to *https://api.exivo.io/v1*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **createDigitalKeyVisit**
-> \Swagger\Client\Model\DigitalKeyVisit createDigitalKeyVisit($site_id, $body)
+> \Exivo\Model\DigitalKeyVisit createDigitalKeyVisit($site_id, $body)
 
 Creates a new digital key visit
 
@@ -23,19 +23,19 @@ Create digital key visits that will be sent to a mobile app. The `name` property
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DigitalKeyVisitApi(
+$apiInstance = new Exivo\Api\DigitalKeyVisitApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $site_id = "site_id_example"; // string | ID of site to work
-$body = new \Swagger\Client\Model\DigitalKeyVisitPayload(); // \Swagger\Client\Model\DigitalKeyVisitPayload | digital key visit properties
+$body = new \Exivo\Model\DigitalKeyVisitPayload(); // \Exivo\Model\DigitalKeyVisitPayload | digital key visit properties
 
 try {
     $result = $apiInstance->createDigitalKeyVisit($site_id, $body);
@@ -51,11 +51,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **string**| ID of site to work |
- **body** | [**\Swagger\Client\Model\DigitalKeyVisitPayload**](../Model/DigitalKeyVisitPayload.md)| digital key visit properties |
+ **body** | [**\Exivo\Model\DigitalKeyVisitPayload**](../Model/DigitalKeyVisitPayload.md)| digital key visit properties |
 
 ### Return type
 
-[**\Swagger\Client\Model\DigitalKeyVisit**](../Model/DigitalKeyVisit.md)
+[**\Exivo\Model\DigitalKeyVisit**](../Model/DigitalKeyVisit.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDigitalKeyVisit**
-> \Swagger\Client\Model\DigitalKeyVisit getDigitalKeyVisit($site_id, $digital_key_visit_id)
+> \Exivo\Model\DigitalKeyVisit getDigitalKeyVisit($site_id, $digital_key_visit_id)
 
 Retrieve a digital key visit.
 
@@ -81,12 +81,12 @@ Retrieve a digital key visit. A digital key visit consists of: The `id` is an uu
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DigitalKeyVisitApi(
+$apiInstance = new Exivo\Api\DigitalKeyVisitApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DigitalKeyVisit**](../Model/DigitalKeyVisit.md)
+[**\Exivo\Model\DigitalKeyVisit**](../Model/DigitalKeyVisit.md)
 
 ### Authorization
 
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDigitalKeyVisits**
-> \Swagger\Client\Model\DigitalKeyVisit[] getDigitalKeyVisits($site_id, $skip, $limit, $sort, $sort_dir)
+> \Exivo\Model\DigitalKeyVisit[] getDigitalKeyVisits($site_id, $skip, $limit, $sort, $sort_dir)
 
 Retrieve a list with all the digital key visits.
 
@@ -139,12 +139,12 @@ Retrieve an array of digital key visits. If a sites has no digital key visits, a
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DigitalKeyVisitApi(
+$apiInstance = new Exivo\Api\DigitalKeyVisitApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DigitalKeyVisit[]**](../Model/DigitalKeyVisit.md)
+[**\Exivo\Model\DigitalKeyVisit[]**](../Model/DigitalKeyVisit.md)
 
 ### Authorization
 
@@ -203,12 +203,12 @@ Revoke a digital key visit. After a digital key visit has been revoked the visit
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\DigitalKeyVisitApi(
+$apiInstance = new Exivo\Api\DigitalKeyVisitApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

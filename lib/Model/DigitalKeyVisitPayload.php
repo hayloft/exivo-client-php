@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Exivo\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Exivo\ObjectSerializer;
 
 /**
  * DigitalKeyVisitPayload Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,7 +63,7 @@ class DigitalKeyVisitPayload implements ModelInterface, ArrayAccess
         'components' => 'string[]',
         'form_factor' => 'string',
         'public_registration_id' => 'string',
-        'mobile_app' => '\Swagger\Client\Model\MobileApp',
+        'mobile_app' => '\Exivo\Model\MobileApp',
         'install_notification' => 'bool',
         'message' => 'string',
         'callback_uri' => 'string'
@@ -460,7 +460,7 @@ class DigitalKeyVisitPayload implements ModelInterface, ArrayAccess
     /**
      * Gets mobile_app
      *
-     * @return \Swagger\Client\Model\MobileApp
+     * @return \Exivo\Model\MobileApp
      */
     public function getMobileApp()
     {
@@ -470,7 +470,7 @@ class DigitalKeyVisitPayload implements ModelInterface, ArrayAccess
     /**
      * Sets mobile_app
      *
-     * @param \Swagger\Client\Model\MobileApp $mobile_app mobile_app
+     * @param \Exivo\Model\MobileApp $mobile_app mobile_app
      *
      * @return $this
      */

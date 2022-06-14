@@ -1,4 +1,4 @@
-# Swagger\Client\SiteApi
+# Exivo\SiteApi
 
 All URIs are relative to *https://api.exivo.io/v1*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getSiteInfo**
-> \Swagger\Client\Model\SiteInfo getSiteInfo($site_id)
+> \Exivo\Model\SiteInfo getSiteInfo($site_id)
 
 returns general site info
 
@@ -20,12 +20,12 @@ Get general site info by `siteId`. Returns an object with the properties `id`, `
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\SiteApi(
+$apiInstance = new Exivo\Api\SiteApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SiteInfo**](../Model/SiteInfo.md)
+[**\Exivo\Model\SiteInfo**](../Model/SiteInfo.md)
 
 ### Authorization
 

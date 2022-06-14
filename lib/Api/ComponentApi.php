@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Exivo\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Exivo\ApiException;
+use Exivo\Configuration;
+use Exivo\HeaderSelector;
+use Exivo\ObjectSerializer;
 
 /**
  * ComponentApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,9 +95,9 @@ class ComponentApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $component_id ID of component to return (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Component
+     * @return \Exivo\Model\Component
      */
     public function getComponent($site_id, $component_id)
     {
@@ -113,13 +113,13 @@ class ComponentApi
      * @param  string $site_id ID of site to work (required)
      * @param  string $component_id ID of component to return (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Component, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\Component, HTTP status code, HTTP response headers (array of strings)
      */
     public function getComponentWithHttpInfo($site_id, $component_id)
     {
-        $returnType = '\Swagger\Client\Model\Component';
+        $returnType = '\Exivo\Model\Component';
         $request = $this->getComponentRequest($site_id, $component_id);
 
         try {
@@ -171,7 +171,7 @@ class ComponentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Component',
+                        '\Exivo\Model\Component',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -215,7 +215,7 @@ class ComponentApi
      */
     public function getComponentAsyncWithHttpInfo($site_id, $component_id)
     {
-        $returnType = '\Swagger\Client\Model\Component';
+        $returnType = '\Exivo\Model\Component';
         $request = $this->getComponentRequest($site_id, $component_id);
 
         return $this->client
@@ -392,9 +392,9 @@ class ComponentApi
      * @param  \DateTime $from e.g. \&quot;2013-10-22\&quot; (optional)
      * @param  \DateTime $to e.g. \&quot;2013-10-23\&quot; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccessLogEntry[]
+     * @return \Exivo\Model\AccessLogEntry[]
      */
     public function getComponentAccessLog($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
@@ -415,13 +415,13 @@ class ComponentApi
      * @param  \DateTime $from e.g. \&quot;2013-10-22\&quot; (optional)
      * @param  \DateTime $to e.g. \&quot;2013-10-23\&quot; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccessLogEntry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\AccessLogEntry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getComponentAccessLogWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
-        $returnType = '\Swagger\Client\Model\AccessLogEntry[]';
+        $returnType = '\Exivo\Model\AccessLogEntry[]';
         $request = $this->getComponentAccessLogRequest($site_id, $skip, $limit, $sort, $sort_dir, $from, $to);
 
         try {
@@ -473,7 +473,7 @@ class ComponentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccessLogEntry[]',
+                        '\Exivo\Model\AccessLogEntry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -527,7 +527,7 @@ class ComponentApi
      */
     public function getComponentAccessLogAsyncWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
-        $returnType = '\Swagger\Client\Model\AccessLogEntry[]';
+        $returnType = '\Exivo\Model\AccessLogEntry[]';
         $request = $this->getComponentAccessLogRequest($site_id, $skip, $limit, $sort, $sort_dir, $from, $to);
 
         return $this->client
@@ -720,9 +720,9 @@ class ComponentApi
      * @param  \DateTime $from e.g. \&quot;2013-10-22\&quot; (optional)
      * @param  \DateTime $to e.g. \&quot;2013-10-23\&quot; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccessLogEntry[]
+     * @return \Exivo\Model\AccessLogEntry[]
      */
     public function getComponentAccessLogForOne($site_id, $component_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
@@ -744,13 +744,13 @@ class ComponentApi
      * @param  \DateTime $from e.g. \&quot;2013-10-22\&quot; (optional)
      * @param  \DateTime $to e.g. \&quot;2013-10-23\&quot; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccessLogEntry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\AccessLogEntry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getComponentAccessLogForOneWithHttpInfo($site_id, $component_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
-        $returnType = '\Swagger\Client\Model\AccessLogEntry[]';
+        $returnType = '\Exivo\Model\AccessLogEntry[]';
         $request = $this->getComponentAccessLogForOneRequest($site_id, $component_id, $skip, $limit, $sort, $sort_dir, $from, $to);
 
         try {
@@ -802,7 +802,7 @@ class ComponentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccessLogEntry[]',
+                        '\Exivo\Model\AccessLogEntry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -858,7 +858,7 @@ class ComponentApi
      */
     public function getComponentAccessLogForOneAsyncWithHttpInfo($site_id, $component_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
-        $returnType = '\Swagger\Client\Model\AccessLogEntry[]';
+        $returnType = '\Exivo\Model\AccessLogEntry[]';
         $request = $this->getComponentAccessLogForOneRequest($site_id, $component_id, $skip, $limit, $sort, $sort_dir, $from, $to);
 
         return $this->client
@@ -1063,9 +1063,9 @@ class ComponentApi
      * @param  string $sort for pagination (optional)
      * @param  string $sort_dir for pagination (optional, default to asc)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Component[]
+     * @return \Exivo\Model\Component[]
      */
     public function getComponents($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
@@ -1084,13 +1084,13 @@ class ComponentApi
      * @param  string $sort for pagination (optional)
      * @param  string $sort_dir for pagination (optional, default to asc)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Component[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\Component[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getComponentsWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
-        $returnType = '\Swagger\Client\Model\Component[]';
+        $returnType = '\Exivo\Model\Component[]';
         $request = $this->getComponentsRequest($site_id, $skip, $limit, $sort, $sort_dir);
 
         try {
@@ -1142,7 +1142,7 @@ class ComponentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Component[]',
+                        '\Exivo\Model\Component[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1192,7 +1192,7 @@ class ComponentApi
      */
     public function getComponentsAsyncWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc')
     {
-        $returnType = '\Swagger\Client\Model\Component[]';
+        $returnType = '\Exivo\Model\Component[]';
         $request = $this->getComponentsRequest($site_id, $skip, $limit, $sort, $sort_dir);
 
         return $this->client
@@ -1368,9 +1368,9 @@ class ComponentApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $component_id ID of component (required)
-     * @param  \Swagger\Client\Model\SetOperatingModePayload $body body (optional)
+     * @param  \Exivo\Model\SetOperatingModePayload $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1386,9 +1386,9 @@ class ComponentApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $component_id ID of component (required)
-     * @param  \Swagger\Client\Model\SetOperatingModePayload $body (optional)
+     * @param  \Exivo\Model\SetOperatingModePayload $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1441,7 +1441,7 @@ class ComponentApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $component_id ID of component (required)
-     * @param  \Swagger\Client\Model\SetOperatingModePayload $body (optional)
+     * @param  \Exivo\Model\SetOperatingModePayload $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1463,7 +1463,7 @@ class ComponentApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $component_id ID of component (required)
-     * @param  \Swagger\Client\Model\SetOperatingModePayload $body (optional)
+     * @param  \Exivo\Model\SetOperatingModePayload $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1501,7 +1501,7 @@ class ComponentApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $component_id ID of component (required)
-     * @param  \Swagger\Client\Model\SetOperatingModePayload $body (optional)
+     * @param  \Exivo\Model\SetOperatingModePayload $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1631,9 +1631,9 @@ class ComponentApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $component_id ID of component (required)
-     * @param  \Swagger\Client\Model\UnlockPayload $body body (optional)
+     * @param  \Exivo\Model\UnlockPayload $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1649,9 +1649,9 @@ class ComponentApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $component_id ID of component (required)
-     * @param  \Swagger\Client\Model\UnlockPayload $body (optional)
+     * @param  \Exivo\Model\UnlockPayload $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1704,7 +1704,7 @@ class ComponentApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $component_id ID of component (required)
-     * @param  \Swagger\Client\Model\UnlockPayload $body (optional)
+     * @param  \Exivo\Model\UnlockPayload $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1726,7 +1726,7 @@ class ComponentApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $component_id ID of component (required)
-     * @param  \Swagger\Client\Model\UnlockPayload $body (optional)
+     * @param  \Exivo\Model\UnlockPayload $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1764,7 +1764,7 @@ class ComponentApi
      *
      * @param  string $site_id ID of site to work (required)
      * @param  string $component_id ID of component (required)
-     * @param  \Swagger\Client\Model\UnlockPayload $body (optional)
+     * @param  \Exivo\Model\UnlockPayload $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

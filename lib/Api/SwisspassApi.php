@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Exivo\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Exivo\ApiException;
+use Exivo\Configuration;
+use Exivo\HeaderSelector;
+use Exivo\ObjectSerializer;
 
 /**
  * SwisspassApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,11 +93,11 @@ class SwisspassApi
      * registers exivo services in SwissPass customer's account
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\Body1 $body customer and service information (required)
+     * @param  \Exivo\Model\Body1 $body customer and service information (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2001
+     * @return \Exivo\Model\InlineResponse2001
      */
     public function register($site_id, $body)
     {
@@ -111,15 +111,15 @@ class SwisspassApi
      * registers exivo services in SwissPass customer's account
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\Body1 $body customer and service information (required)
+     * @param  \Exivo\Model\Body1 $body customer and service information (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
     public function registerWithHttpInfo($site_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2001';
+        $returnType = '\Exivo\Model\InlineResponse2001';
         $request = $this->registerRequest($site_id, $body);
 
         try {
@@ -171,7 +171,7 @@ class SwisspassApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2001',
+                        '\Exivo\Model\InlineResponse2001',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -187,7 +187,7 @@ class SwisspassApi
      * registers exivo services in SwissPass customer's account
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\Body1 $body customer and service information (required)
+     * @param  \Exivo\Model\Body1 $body customer and service information (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -208,14 +208,14 @@ class SwisspassApi
      * registers exivo services in SwissPass customer's account
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\Body1 $body customer and service information (required)
+     * @param  \Exivo\Model\Body1 $body customer and service information (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function registerAsyncWithHttpInfo($site_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2001';
+        $returnType = '\Exivo\Model\InlineResponse2001';
         $request = $this->registerRequest($site_id, $body);
 
         return $this->client
@@ -259,7 +259,7 @@ class SwisspassApi
      * Create request for operation 'register'
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\Body1 $body customer and service information (required)
+     * @param  \Exivo\Model\Body1 $body customer and service information (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -380,11 +380,11 @@ class SwisspassApi
      * returns swisspass customer and card data
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\Body $body body (required)
+     * @param  \Exivo\Model\Body $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse200
+     * @return \Exivo\Model\InlineResponse200
      */
     public function search($site_id, $body)
     {
@@ -398,15 +398,15 @@ class SwisspassApi
      * returns swisspass customer and card data
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\Body $body (required)
+     * @param  \Exivo\Model\Body $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchWithHttpInfo($site_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\Exivo\Model\InlineResponse200';
         $request = $this->searchRequest($site_id, $body);
 
         try {
@@ -458,7 +458,7 @@ class SwisspassApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse200',
+                        '\Exivo\Model\InlineResponse200',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -474,7 +474,7 @@ class SwisspassApi
      * returns swisspass customer and card data
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\Body $body (required)
+     * @param  \Exivo\Model\Body $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -495,14 +495,14 @@ class SwisspassApi
      * returns swisspass customer and card data
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\Body $body (required)
+     * @param  \Exivo\Model\Body $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function searchAsyncWithHttpInfo($site_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\Exivo\Model\InlineResponse200';
         $request = $this->searchRequest($site_id, $body);
 
         return $this->client
@@ -546,7 +546,7 @@ class SwisspassApi
      * Create request for operation 'search'
      *
      * @param  string $site_id ID of site to work (required)
-     * @param  \Swagger\Client\Model\Body $body (required)
+     * @param  \Exivo\Model\Body $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

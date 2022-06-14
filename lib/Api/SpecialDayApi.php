@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Exivo\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Exivo\ApiException;
+use Exivo\Configuration;
+use Exivo\HeaderSelector;
+use Exivo\ObjectSerializer;
 
 /**
  * SpecialDayApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,9 +95,9 @@ class SpecialDayApi
      * @param  string $site_id ID of site to work (required)
      * @param  object $body special day changes (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SpecialDays
+     * @return \Exivo\Model\SpecialDays
      */
     public function changeSpecialDays($site_id, $body)
     {
@@ -113,13 +113,13 @@ class SpecialDayApi
      * @param  string $site_id ID of site to work (required)
      * @param  object $body special day changes (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SpecialDays, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\SpecialDays, HTTP status code, HTTP response headers (array of strings)
      */
     public function changeSpecialDaysWithHttpInfo($site_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\SpecialDays';
+        $returnType = '\Exivo\Model\SpecialDays';
         $request = $this->changeSpecialDaysRequest($site_id, $body);
 
         try {
@@ -171,7 +171,7 @@ class SpecialDayApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SpecialDays',
+                        '\Exivo\Model\SpecialDays',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -215,7 +215,7 @@ class SpecialDayApi
      */
     public function changeSpecialDaysAsyncWithHttpInfo($site_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\SpecialDays';
+        $returnType = '\Exivo\Model\SpecialDays';
         $request = $this->changeSpecialDaysRequest($site_id, $body);
 
         return $this->client
@@ -381,9 +381,9 @@ class SpecialDayApi
      *
      * @param  string $site_id ID of site to work (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SpecialDays
+     * @return \Exivo\Model\SpecialDays
      */
     public function getSpecialDays($site_id)
     {
@@ -398,13 +398,13 @@ class SpecialDayApi
      *
      * @param  string $site_id ID of site to work (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SpecialDays, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\SpecialDays, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSpecialDaysWithHttpInfo($site_id)
     {
-        $returnType = '\Swagger\Client\Model\SpecialDays';
+        $returnType = '\Exivo\Model\SpecialDays';
         $request = $this->getSpecialDaysRequest($site_id);
 
         try {
@@ -456,7 +456,7 @@ class SpecialDayApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SpecialDays',
+                        '\Exivo\Model\SpecialDays',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -498,7 +498,7 @@ class SpecialDayApi
      */
     public function getSpecialDaysAsyncWithHttpInfo($site_id)
     {
-        $returnType = '\Swagger\Client\Model\SpecialDays';
+        $returnType = '\Exivo\Model\SpecialDays';
         $request = $this->getSpecialDaysRequest($site_id);
 
         return $this->client

@@ -1,4 +1,4 @@
-# Swagger\Client\ComponentApi
+# Exivo\ComponentApi
 
 All URIs are relative to *https://api.exivo.io/v1*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **getComponent**
-> \Swagger\Client\Model\Component getComponent($site_id, $component_id)
+> \Exivo\Model\Component getComponent($site_id, $component_id)
 
 get component by ID
 
@@ -25,12 +25,12 @@ Returns the component with the given id. If no component with this id exists a 4
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ComponentApi(
+$apiInstance = new Exivo\Api\ComponentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Component**](../Model/Component.md)
+[**\Exivo\Model\Component**](../Model/Component.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getComponentAccessLog**
-> \Swagger\Client\Model\AccessLogEntry[] getComponentAccessLog($site_id, $skip, $limit, $sort, $sort_dir, $from, $to)
+> \Exivo\Model\AccessLogEntry[] getComponentAccessLog($site_id, $skip, $limit, $sort, $sort_dir, $from, $to)
 
 get components access log
 
@@ -83,12 +83,12 @@ get components access log
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ComponentApi(
+$apiInstance = new Exivo\Api\ComponentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AccessLogEntry[]**](../Model/AccessLogEntry.md)
+[**\Exivo\Model\AccessLogEntry[]**](../Model/AccessLogEntry.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getComponentAccessLogForOne**
-> \Swagger\Client\Model\AccessLogEntry[] getComponentAccessLogForOne($site_id, $component_id, $skip, $limit, $sort, $sort_dir, $from, $to)
+> \Exivo\Model\AccessLogEntry[] getComponentAccessLogForOne($site_id, $component_id, $skip, $limit, $sort, $sort_dir, $from, $to)
 
 get component's access log
 
@@ -151,12 +151,12 @@ get component's access log
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ComponentApi(
+$apiInstance = new Exivo\Api\ComponentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AccessLogEntry[]**](../Model/AccessLogEntry.md)
+[**\Exivo\Model\AccessLogEntry[]**](../Model/AccessLogEntry.md)
 
 ### Authorization
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getComponents**
-> \Swagger\Client\Model\Component[] getComponents($site_id, $skip, $limit, $sort, $sort_dir)
+> \Exivo\Model\Component[] getComponents($site_id, $skip, $limit, $sort, $sort_dir)
 
 get all components
 
@@ -221,12 +221,12 @@ Returns an array with all components of the site. If the site doesn't have any c
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ComponentApi(
+$apiInstance = new Exivo\Api\ComponentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Component[]**](../Model/Component.md)
+[**\Exivo\Model\Component[]**](../Model/Component.md)
 
 ### Authorization
 
@@ -285,12 +285,12 @@ Set operating mode of a component with `componentId`.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ComponentApi(
+$apiInstance = new Exivo\Api\ComponentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -298,7 +298,7 @@ $apiInstance = new Swagger\Client\Api\ComponentApi(
 );
 $site_id = "site_id_example"; // string | ID of site to work
 $component_id = "component_id_example"; // string | ID of component
-$body = new \Swagger\Client\Model\SetOperatingModePayload(); // \Swagger\Client\Model\SetOperatingModePayload | 
+$body = new \Exivo\Model\SetOperatingModePayload(); // \Exivo\Model\SetOperatingModePayload | 
 
 try {
     $apiInstance->setComponentOperatingMode($site_id, $component_id, $body);
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **string**| ID of site to work |
  **component_id** | **string**| ID of component |
- **body** | [**\Swagger\Client\Model\SetOperatingModePayload**](../Model/SetOperatingModePayload.md)|  | [optional]
+ **body** | [**\Exivo\Model\SetOperatingModePayload**](../Model/SetOperatingModePayload.md)|  | [optional]
 
 ### Return type
 
@@ -344,12 +344,12 @@ Unlock a door with `componentId`. A request to unlock the door will be sent. Thi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\ComponentApi(
+$apiInstance = new Exivo\Api\ComponentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -357,7 +357,7 @@ $apiInstance = new Swagger\Client\Api\ComponentApi(
 );
 $site_id = "site_id_example"; // string | ID of site to work
 $component_id = "component_id_example"; // string | ID of component
-$body = new \Swagger\Client\Model\UnlockPayload(); // \Swagger\Client\Model\UnlockPayload | 
+$body = new \Exivo\Model\UnlockPayload(); // \Exivo\Model\UnlockPayload | 
 
 try {
     $apiInstance->unlock($site_id, $component_id, $body);
@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **string**| ID of site to work |
  **component_id** | **string**| ID of component |
- **body** | [**\Swagger\Client\Model\UnlockPayload**](../Model/UnlockPayload.md)|  | [optional]
+ **body** | [**\Exivo\Model\UnlockPayload**](../Model/UnlockPayload.md)|  | [optional]
 
 ### Return type
 

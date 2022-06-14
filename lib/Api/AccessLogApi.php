@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Exivo\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Exivo\ApiException;
+use Exivo\Configuration;
+use Exivo\HeaderSelector;
+use Exivo\ObjectSerializer;
 
 /**
  * AccessLogApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Exivo
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -100,9 +100,9 @@ class AccessLogApi
      * @param  \DateTime $from e.g. \&quot;2013-10-22\&quot; (optional)
      * @param  \DateTime $to e.g. \&quot;2013-10-23\&quot; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccessLogEntry[]
+     * @return \Exivo\Model\AccessLogEntry[]
      */
     public function getComponentAccessLog($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
@@ -123,13 +123,13 @@ class AccessLogApi
      * @param  \DateTime $from e.g. \&quot;2013-10-22\&quot; (optional)
      * @param  \DateTime $to e.g. \&quot;2013-10-23\&quot; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccessLogEntry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\AccessLogEntry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getComponentAccessLogWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
-        $returnType = '\Swagger\Client\Model\AccessLogEntry[]';
+        $returnType = '\Exivo\Model\AccessLogEntry[]';
         $request = $this->getComponentAccessLogRequest($site_id, $skip, $limit, $sort, $sort_dir, $from, $to);
 
         try {
@@ -181,7 +181,7 @@ class AccessLogApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccessLogEntry[]',
+                        '\Exivo\Model\AccessLogEntry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -235,7 +235,7 @@ class AccessLogApi
      */
     public function getComponentAccessLogAsyncWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
-        $returnType = '\Swagger\Client\Model\AccessLogEntry[]';
+        $returnType = '\Exivo\Model\AccessLogEntry[]';
         $request = $this->getComponentAccessLogRequest($site_id, $skip, $limit, $sort, $sort_dir, $from, $to);
 
         return $this->client
@@ -428,9 +428,9 @@ class AccessLogApi
      * @param  \DateTime $from e.g. \&quot;2013-10-22\&quot; (optional)
      * @param  \DateTime $to e.g. \&quot;2013-10-23\&quot; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccessLogEntry[]
+     * @return \Exivo\Model\AccessLogEntry[]
      */
     public function getComponentAccessLogForOne($site_id, $component_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
@@ -452,13 +452,13 @@ class AccessLogApi
      * @param  \DateTime $from e.g. \&quot;2013-10-22\&quot; (optional)
      * @param  \DateTime $to e.g. \&quot;2013-10-23\&quot; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccessLogEntry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\AccessLogEntry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getComponentAccessLogForOneWithHttpInfo($site_id, $component_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
-        $returnType = '\Swagger\Client\Model\AccessLogEntry[]';
+        $returnType = '\Exivo\Model\AccessLogEntry[]';
         $request = $this->getComponentAccessLogForOneRequest($site_id, $component_id, $skip, $limit, $sort, $sort_dir, $from, $to);
 
         try {
@@ -510,7 +510,7 @@ class AccessLogApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccessLogEntry[]',
+                        '\Exivo\Model\AccessLogEntry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -566,7 +566,7 @@ class AccessLogApi
      */
     public function getComponentAccessLogForOneAsyncWithHttpInfo($site_id, $component_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
-        $returnType = '\Swagger\Client\Model\AccessLogEntry[]';
+        $returnType = '\Exivo\Model\AccessLogEntry[]';
         $request = $this->getComponentAccessLogForOneRequest($site_id, $component_id, $skip, $limit, $sort, $sort_dir, $from, $to);
 
         return $this->client
@@ -773,9 +773,9 @@ class AccessLogApi
      * @param  \DateTime $from e.g. \&quot;2013-10-22\&quot; (optional)
      * @param  \DateTime $to e.g. \&quot;2013-10-23\&quot; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccessLogEntry[]
+     * @return \Exivo\Model\AccessLogEntry[]
      */
     public function getPersonAccessLog($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
@@ -796,13 +796,13 @@ class AccessLogApi
      * @param  \DateTime $from e.g. \&quot;2013-10-22\&quot; (optional)
      * @param  \DateTime $to e.g. \&quot;2013-10-23\&quot; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccessLogEntry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\AccessLogEntry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getPersonAccessLogWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
-        $returnType = '\Swagger\Client\Model\AccessLogEntry[]';
+        $returnType = '\Exivo\Model\AccessLogEntry[]';
         $request = $this->getPersonAccessLogRequest($site_id, $skip, $limit, $sort, $sort_dir, $from, $to);
 
         try {
@@ -854,7 +854,7 @@ class AccessLogApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccessLogEntry[]',
+                        '\Exivo\Model\AccessLogEntry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -908,7 +908,7 @@ class AccessLogApi
      */
     public function getPersonAccessLogAsyncWithHttpInfo($site_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
-        $returnType = '\Swagger\Client\Model\AccessLogEntry[]';
+        $returnType = '\Exivo\Model\AccessLogEntry[]';
         $request = $this->getPersonAccessLogRequest($site_id, $skip, $limit, $sort, $sort_dir, $from, $to);
 
         return $this->client
@@ -1101,9 +1101,9 @@ class AccessLogApi
      * @param  \DateTime $from e.g. \&quot;2013-10-22\&quot; (optional)
      * @param  \DateTime $to e.g. \&quot;2013-10-23\&quot; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccessLogEntry[]
+     * @return \Exivo\Model\AccessLogEntry[]
      */
     public function getPersonAccessLogForOne($site_id, $person_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
@@ -1125,13 +1125,13 @@ class AccessLogApi
      * @param  \DateTime $from e.g. \&quot;2013-10-22\&quot; (optional)
      * @param  \DateTime $to e.g. \&quot;2013-10-23\&quot; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Exivo\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccessLogEntry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Exivo\Model\AccessLogEntry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getPersonAccessLogForOneWithHttpInfo($site_id, $person_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
-        $returnType = '\Swagger\Client\Model\AccessLogEntry[]';
+        $returnType = '\Exivo\Model\AccessLogEntry[]';
         $request = $this->getPersonAccessLogForOneRequest($site_id, $person_id, $skip, $limit, $sort, $sort_dir, $from, $to);
 
         try {
@@ -1183,7 +1183,7 @@ class AccessLogApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccessLogEntry[]',
+                        '\Exivo\Model\AccessLogEntry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1239,7 +1239,7 @@ class AccessLogApi
      */
     public function getPersonAccessLogForOneAsyncWithHttpInfo($site_id, $person_id, $skip = '0', $limit = '0', $sort = null, $sort_dir = 'asc', $from = null, $to = null)
     {
-        $returnType = '\Swagger\Client\Model\AccessLogEntry[]';
+        $returnType = '\Exivo\Model\AccessLogEntry[]';
         $request = $this->getPersonAccessLogForOneRequest($site_id, $person_id, $skip, $limit, $sort, $sort_dir, $from, $to);
 
         return $this->client

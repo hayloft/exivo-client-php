@@ -1,4 +1,4 @@
-# Swagger\Client\SpecialDayApi
+# Exivo\SpecialDayApi
 
 All URIs are relative to *https://api.exivo.io/v1*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **changeSpecialDays**
-> \Swagger\Client\Model\SpecialDays changeSpecialDays($site_id, $body)
+> \Exivo\Model\SpecialDays changeSpecialDays($site_id, $body)
 
 changes the configuration of special days
 
@@ -21,12 +21,12 @@ As body it expects an array of commands, where every command is an object with a
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\SpecialDayApi(
+$apiInstance = new Exivo\Api\SpecialDayApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SpecialDays**](../Model/SpecialDays.md)
+[**\Exivo\Model\SpecialDays**](../Model/SpecialDays.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSpecialDays**
-> \Swagger\Client\Model\SpecialDays getSpecialDays($site_id)
+> \Exivo\Model\SpecialDays getSpecialDays($site_id)
 
 get all special days
 
@@ -79,12 +79,12 @@ Returns all special days for the specified site as an array of objects containin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = Exivo\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Swagger\Client\Api\SpecialDayApi(
+$apiInstance = new Exivo\Api\SpecialDayApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SpecialDays**](../Model/SpecialDays.md)
+[**\Exivo\Model\SpecialDays**](../Model/SpecialDays.md)
 
 ### Authorization
 
