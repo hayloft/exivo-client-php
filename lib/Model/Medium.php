@@ -430,15 +430,6 @@ class Medium implements ModelInterface, ArrayAccess
      */
     public function setState($state)
     {
-        $allowedValues = $this->getStateAllowableValues();
-        if (!is_null($state) && !in_array($state, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'state', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['state'] = $state;
 
         return $this;
