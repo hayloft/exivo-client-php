@@ -61,7 +61,9 @@ class PersonPayload implements ModelInterface, ArrayAccess
         'last_name' => 'string',
         'gender' => 'string',
         'language' => 'string',
-        'info' => 'string'
+        'info' => 'string',
+        'entry_date' => 'string',
+        'exit_date' => 'string',
     ];
 
     /**
@@ -74,7 +76,9 @@ class PersonPayload implements ModelInterface, ArrayAccess
         'last_name' => null,
         'gender' => null,
         'language' => null,
-        'info' => null
+        'info' => null,
+        'entry_date' => null,
+        'exit_date' => null,
     ];
 
     /**
@@ -108,7 +112,9 @@ class PersonPayload implements ModelInterface, ArrayAccess
         'last_name' => 'lastName',
         'gender' => 'gender',
         'language' => 'language',
-        'info' => 'info'
+        'info' => 'info',
+        'entry_date' => 'entryDate',
+        'exit_date' => 'exitDate',
     ];
 
     /**
@@ -121,7 +127,9 @@ class PersonPayload implements ModelInterface, ArrayAccess
         'last_name' => 'setLastName',
         'gender' => 'setGender',
         'language' => 'setLanguage',
-        'info' => 'setInfo'
+        'info' => 'setInfo',
+        'entry_date' => 'setEntryDate',
+        'exit_date' => 'setExitDate',
     ];
 
     /**
@@ -134,7 +142,9 @@ class PersonPayload implements ModelInterface, ArrayAccess
         'last_name' => 'getLastName',
         'gender' => 'getGender',
         'language' => 'getLanguage',
-        'info' => 'getInfo'
+        'info' => 'getInfo',
+        'entry_date' => 'getEntryDate',
+        'exit_date' => 'getExitDate',
     ];
 
     /**
@@ -252,6 +262,8 @@ class PersonPayload implements ModelInterface, ArrayAccess
         $this->container['gender'] = isset($data['gender']) ? $data['gender'] : 'notspecified';
         $this->container['language'] = isset($data['language']) ? $data['language'] : 'en';
         $this->container['info'] = isset($data['info']) ? $data['info'] : null;
+        $this->container['entry_date'] = isset($data['entry_date']) ? $data['entry_date'] : null;
+        $this->container['exit_date'] = isset($data['exit_date']) ? $data['exit_date'] : null;
     }
 
     /**
@@ -428,6 +440,30 @@ class PersonPayload implements ModelInterface, ArrayAccess
     public function setInfo($info)
     {
         $this->container['info'] = $info;
+
+        return $this;
+    }
+
+    public function getEntryDate()
+    {
+        return $this->container['entry_date'];
+    }
+
+    public function setEntryDate($entryDate)
+    {
+        $this->container['entry_date'] = $entryDate;
+
+        return $this;
+    }
+
+    public function getExitDate()
+    {
+        return $this->container['exit_date'];
+    }
+
+    public function setExitDate($exitDate)
+    {
+        $this->container['exit_date'] = $exitDate;
 
         return $this;
     }
