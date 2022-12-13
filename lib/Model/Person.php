@@ -59,7 +59,9 @@ class Person extends PersonPayload
         'revoked' => 'bool',
         'access_group_id' => 'string',
         'has_pin_code' => 'bool',
-        'media' => 'string[]'
+        'media' => 'string[]',
+        'entry_date' => 'string',
+        'exit_date' => 'string',
     ];
 
     /**
@@ -72,7 +74,9 @@ class Person extends PersonPayload
         'revoked' => null,
         'access_group_id' => null,
         'has_pin_code' => null,
-        'media' => null
+        'media' => null,
+        'entry_date' => null,
+        'exit_date' => null,
     ];
 
     /**
@@ -106,7 +110,9 @@ class Person extends PersonPayload
         'revoked' => 'revoked',
         'access_group_id' => 'accessGroupId',
         'has_pin_code' => 'hasPinCode',
-        'media' => 'media'
+        'media' => 'media',
+        'entry_date' => 'entryDate',
+        'exit_date' => 'exitDate',
     ];
 
     /**
@@ -119,7 +125,9 @@ class Person extends PersonPayload
         'revoked' => 'setRevoked',
         'access_group_id' => 'setAccessGroupId',
         'has_pin_code' => 'setHasPinCode',
-        'media' => 'setMedia'
+        'media' => 'setMedia',
+        'entry_date' => 'setEntryDate',
+        'exit_date' => 'setExitDate',
     ];
 
     /**
@@ -132,7 +140,9 @@ class Person extends PersonPayload
         'revoked' => 'getRevoked',
         'access_group_id' => 'getAccessGroupId',
         'has_pin_code' => 'getHasPinCode',
-        'media' => 'getMedia'
+        'media' => 'getMedia',
+        'entry_date' => 'getEntryDate',
+        'exit_date' => 'getExitDate',
     ];
 
     /**
@@ -176,9 +186,9 @@ class Person extends PersonPayload
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
 
     /**
@@ -196,6 +206,8 @@ class Person extends PersonPayload
         $this->container['access_group_id'] = isset($data['access_group_id']) ? $data['access_group_id'] : null;
         $this->container['has_pin_code'] = isset($data['has_pin_code']) ? $data['has_pin_code'] : null;
         $this->container['media'] = isset($data['media']) ? $data['media'] : null;
+        $this->container['entry_date'] = isset($data['entry_date']) ? $data['entry_date'] : null;
+        $this->container['exit_date'] = isset($data['exit_date']) ? $data['exit_date'] : null;
     }
 
     /**
@@ -341,6 +353,31 @@ class Person extends PersonPayload
 
         return $this;
     }
+
+    public function getEntryDate()
+    {
+        return $this->container['entry_date'];
+    }
+
+    public function setEntryDate($entryDate)
+    {
+        $this->container['entry_date'] = $entryDate;
+
+        return $this;
+    }
+
+    public function getExitDate()
+    {
+        return $this->container['exit_date'];
+    }
+
+    public function setExitDate($exitDate)
+    {
+        $this->container['exit_date'] = $exitDate;
+
+        return $this;
+    }
+
     /**
      * Returns true if offset exists. False otherwise.
      *
