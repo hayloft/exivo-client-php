@@ -197,6 +197,7 @@ class DigitalKey implements ModelInterface, ArrayAccess
     const STATE_ASSIGNED = 'assigned';
     const STATE_ACTIVE = 'active';
     const STATE_BLOCKED = 'blocked';
+    const STATE_BLOCKED_BUT_PENDING = 'blockedButPending';
     const STATE_DAMAGED = 'damaged';
     const STATE_LOST = 'lost';
     
@@ -230,6 +231,7 @@ class DigitalKey implements ModelInterface, ArrayAccess
             self::STATE_ASSIGNED,
             self::STATE_ACTIVE,
             self::STATE_BLOCKED,
+            self::STATE_BLOCKED_BUT_PENDING,
             self::STATE_DAMAGED,
             self::STATE_LOST,
         ];
